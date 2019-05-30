@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[GitLab + Docker 私有化部署]]></title>
+    <url>%2F2019%2F05%2F30%2FGitlab-Docker-%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%2F</url>
+    <content type="text"><![CDATA[为什么使用Gitlab遇到了一个很重视信息安全的Boss，代码都放在本地用SVN管理，对于没有怎么用过SVN的我来说，简直无从下手。为了方便，高效的管理项目，并跟踪项目中的问题，了解到了Gitlab这个神奇的存在，相比Github的私有仓库收费，且可能存在信息安全方面的风险，Gitlab支持私有化部署，而且免费，社区版本基本满足git项目管理需求，权限管理，项目分支版本管理，以及CI/CD功能等，相当小而精。下面介绍如果部署私有化Gitlab。 安装DockerGitlab有两种安装方式。 第一种是自己下载Gitlab安装包，自己配置相关运行环境，相当麻烦，更换机器，就得重新配置，让我想起了当年在服务器上部署MySql，Tomcat，Nginx，Kafka等组件的恐惧，多的时候有七八个组件，部署环境搞大半天，还要分布式部署，那个头大。 第二种方式是用现在非常流行的Docker来部署，Docker是一个虚拟化运行工具，将软件和整个环境打包起来，我们可以不需要任何配置，快速的部署环境来运行软件，提升效率。 下载安装Docker,执行如下命令:1brew cask install docker 配置镜像加速器鉴于国内网络原因，拉取Docker镜像十分缓慢，非常有必要配置一个加速器来解决速度问题。 在任务栏点击 Docker for mac 应用图标-&gt; Perferences... -&gt; Daemon -&gt; Registry mirrors在列表中填写加速器地址即可。修改完成之后，点击Apply &amp; Restart按钮，Docker 就会重启并应用配置的镜像地址了。地址如下：1http://f1361db2.m.daocloud.io 编写docker-compose.yml配置文件新建docker-compose.yml文件，写入如下内容。端口可以使用默认端口，也可以自己配置端口。 image 代表着最新的gitlab版本镜像 hostname代表域名，本地可以直接使用localhost或者局域网ip Volumes 本机映射文件路径可自己配置 12345678910111213141516web: image: 'gitlab/gitlab-ce:latest' restart: always hostname: 'gitlab.example.com' environment: GITLAB_OMNIBUS_CONFIG: | external_url 'https://gitlab.example.com' # Add any other gitlab.rb configuration here, each on its own line ports: - '80:80' - '443:443' - '22:22' volumes: - '/srv/gitlab/config:/etc/gitlab' - '/srv/gitlab/logs:/var/log/gitlab' - '/srv/gitlab/data:/var/opt/gitlab' 在当前目录下执行如下命令:1docker-compose up -d 等待片刻，浏览器网址输入打开localhost,就可以看到一个部署成功，运行起来的Gitlab，如下图： 因为我docker-compose.yml文件中images配置了汉化镜像：1image: &apos;twang2218/gitlab-ce-zh:11.1.4&apos; 分分钟，一个本地私有化的Gitlab就部署好了。]]></content>
+      <categories>
+        <category>GitLab</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[第一篇Blog]]></title>
     <url>%2F2019%2F05%2F28%2F%E7%AC%AC%E4%B8%80%E7%AF%87Blog%2F</url>
     <content type="text"><![CDATA[一直想着搭建自己的博客，拥有自己的一个小天地。最近终于行动了，博客搭建过程中，并没有想象中的那么难，畏难心态在以后的人生路中需要全力克服。 毕业这几年，感觉都不是很顺，但是也收获成长了许多，接下来就是对自己狠一点，逼自己尽快成长。下周就是新的开始了，希望自己能抗下压力，挑战成功，逆风翻盘。 自己焦虑的点是什么，就去做它，一直做到自己不焦虑为止。加油。]]></content>
