@@ -96,17 +96,21 @@
 
 
 
-  <meta name="description" content="记录人生">
-<meta name="keywords" content="Android">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Liang Xiao&#39;s Notes">
-<meta property="og:url" content="https://liangxiao5.github.io/tags/碎碎念/index.html">
+  <meta name="description" content="常识性的知识，自己是知道的，但是又不确定是否准确，经常会出现这种状况。So，为了避免这种尴尬的情况出现，工作中一些小的知识点，整理记录下来。 View控件INVISIBLE，GONE的区别查看项目代码，很多布局是复用一个xml文件，导致有大量的逻辑去处理控件是否显示，VISIBLE不用多说，正常显示控件，一般不可见控件，我会选择GONE属性，但是还存在一种INVISIBLE属性，也是不可见，区别是">
+<meta name="keywords" content="技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android 知识点 日常记录（一）">
+<meta property="og:url" content="https://liangxiao5.github.io/2019/06/07/Android知识点日常记录(一)/index.html">
 <meta property="og:site_name" content="Liang Xiao&#39;s Notes">
-<meta property="og:description" content="记录人生">
+<meta property="og:description" content="常识性的知识，自己是知道的，但是又不确定是否准确，经常会出现这种状况。So，为了避免这种尴尬的情况出现，工作中一些小的知识点，整理记录下来。 View控件INVISIBLE，GONE的区别查看项目代码，很多布局是复用一个xml文件，导致有大量的逻辑去处理控件是否显示，VISIBLE不用多说，正常显示控件，一般不可见控件，我会选择GONE属性，但是还存在一种INVISIBLE属性，也是不可见，区别是">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://liangxiao5.github.io/2019/06/07/Android知识点日常记录(一)/scrollView.jpg">
+<meta property="og:image" content="https://liangxiao5.github.io/2019/06/07/Android知识点日常记录(一)/addView.jpg">
+<meta property="og:updated_time" content="2019-06-07T09:28:28.879Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Liang Xiao&#39;s Notes">
-<meta name="twitter:description" content="记录人生">
+<meta name="twitter:title" content="Android 知识点 日常记录（一）">
+<meta name="twitter:description" content="常识性的知识，自己是知道的，但是又不确定是否准确，经常会出现这种状况。So，为了避免这种尴尬的情况出现，工作中一些小的知识点，整理记录下来。 View控件INVISIBLE，GONE的区别查看项目代码，很多布局是复用一个xml文件，导致有大量的逻辑去处理控件是否显示，VISIBLE不用多说，正常显示控件，一般不可见控件，我会选择GONE属性，但是还存在一种INVISIBLE属性，也是不可见，区别是">
+<meta name="twitter:image" content="https://liangxiao5.github.io/2019/06/07/Android知识点日常记录(一)/scrollView.jpg">
 
 
 
@@ -114,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="https://liangxiao5.github.io/tags/碎碎念/">
+  <link rel="canonical" href="https://liangxiao5.github.io/2019/06/07/Android知识点日常记录(一)/">
 
 
 
@@ -124,7 +128,7 @@
   };
 </script>
 
-  <title>标签: 碎碎念 | Liang Xiao's Notes</title>
+  <title>Android 知识点 日常记录（一） | Liang Xiao's Notes</title>
   
 
 
@@ -172,7 +176,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -231,7 +235,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -360,83 +364,271 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>碎碎念<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liangxiao5.github.io/2019/06/07/Android知识点日常记录(一)/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liang Xiao">
+      <meta itemprop="description" content="记录人生">
+      <meta itemprop="image" content="/images/touxiang.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Liang Xiao's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/05/28/第一篇Blog/" itemprop="url">
-            
-              <span itemprop="name">第一篇Blog</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Android 知识点 日常记录（一）
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-28T22:48:26+08:00" content="2019-05-28">
-          05-28
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-07 13:43:13 / 修改时间：17:28:28" itemprop="dateCreated datePublished" datetime="2019-06-07T13:43:13+08:00">2019-06-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3k字</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>常识性的知识，自己是知道的，但是又不确定是否准确，经常会出现这种状况。So，为了避免这种尴尬的情况出现，工作中一些小的知识点，整理记录下来。</p>
+<h2 id="View控件INVISIBLE，GONE的区别"><a href="#View控件INVISIBLE，GONE的区别" class="headerlink" title="View控件INVISIBLE，GONE的区别"></a>View控件INVISIBLE，GONE的区别</h2><p>查看项目代码，很多布局是复用一个xml文件，导致有大量的逻辑去处理控件是否显示，<code>VISIBLE</code>不用多说，正常显示控件，一般不可见控件，我会选择<code>GONE</code>属性，但是还存在一种<code>INVISIBLE</code>属性，也是不可见，区别是什么呢？</p>
+<h4 id="源码探究"><a href="#源码探究" class="headerlink" title="源码探究"></a>源码探究</h4><p>查看<code>ViewGroup</code>源码，如下方法，<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">measureChildren</span><span class="params">(<span class="keyword">int</span> widthMeasureSpec, <span class="keyword">int</span> heightMeasureSpec)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">int</span> size = mChildrenCount;</span><br><span class="line">        <span class="keyword">final</span> View[] children = mChildren;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; ++i) &#123;</span><br><span class="line">            <span class="keyword">final</span> View child = children[i];</span><br><span class="line">            <span class="keyword">if</span> ((child.mViewFlags &amp; VISIBILITY_MASK) != GONE) &#123;</span><br><span class="line">                measureChild(child, widthMeasureSpec, heightMeasureSpec);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">dispatchDraw</span><span class="params">(Canvas canvas)</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; childrenCount; i++) &#123;</span><br><span class="line">        <span class="keyword">while</span> (transientIndex &gt;= <span class="number">0</span> &amp;&amp; mTransientIndices.get(transientIndex) == i) &#123;</span><br><span class="line">                <span class="keyword">final</span> View transientChild = mTransientViews.get(transientIndex);</span><br><span class="line">                <span class="keyword">if</span> ((transientChild.mViewFlags &amp; VISIBILITY_MASK) == VISIBLE ||</span><br><span class="line">                        transientChild.getAnimation() != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    more |= drawChild(canvas, transientChild, drawingTime);</span><br><span class="line">                &#125;</span><br><span class="line">                transientIndex++;</span><br><span class="line">                <span class="keyword">if</span> (transientIndex &gt;= transientCount) &#123;</span><br><span class="line">                    transientIndex = -<span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">final</span> <span class="keyword">int</span> childIndex = getAndVerifyPreorderedIndex(childrenCount, i, customOrder);</span><br><span class="line">            <span class="keyword">final</span> View child = getAndVerifyPreorderedView(preorderedList, children, childIndex);</span><br><span class="line">            <span class="keyword">if</span> ((child.mViewFlags &amp; VISIBILITY_MASK) == VISIBLE || child.getAnimation() != <span class="keyword">null</span>) &#123;</span><br><span class="line">                more |= drawChild(canvas, child, drawingTime);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>由上面两个源码方法可知，控件设置<code>GONE</code>属性，没有走<code>measureChild(child, widthMeasureSpec, heightMeasureSpec);</code>方法。</p>
+<p>查看<code>dispatchDraw(Canvas canvas);</code>方法，可知，只有设置<code>VISIBLE</code>属性，才会执行<code>drawChild(canvas, child, drawingTime);</code> <code>INVISIBLE</code>与<code>GONE</code>均不执行此方法。</p>
+<p>由<code>View</code>绘制流程可知，<code>GONE</code>属性未执行<code>onMeasure()</code>方法，所以不会占用界面空间。<code>INVISIBLE</code>执行了<code>onMeasure()</code>方法，但是没有执行<code>onDraw()</code>方法，所以会占用界面空间，但是不显示。</p>
+<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INVISIBLE:不可见，保留了控件在界面的空间，相当于仍然占着坑</span><br><span class="line"></span><br><span class="line">GONE：不可见，不保留控件在界面的空间，未占坑</span><br></pre></td></tr></table></figure>
+<h2 id="ScrollView只能有一个子节点"><a href="#ScrollView只能有一个子节点" class="headerlink" title="ScrollView只能有一个子节点"></a>ScrollView只能有一个子节点</h2><p><code>ScrollView</code>经常被使用在布局中以实现滑动效果，可以显示比实际界面的多的内容。在使用过程中，没注意，项目运行后，出现了<code>ScrollView can host only one direct child</code>异常：<br><img src="scrollView.jpg" alt="error"></p>
+<p>查看官方文档，描述如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class ScrollView </span><br><span class="line">extends FrameLayout </span><br><span class="line"></span><br><span class="line">java.lang.Object</span><br><span class="line">   ↳	android.view.View</span><br><span class="line"> 	   ↳	android.view.ViewGroup</span><br><span class="line"> 	 	   ↳	android.widget.FrameLayout</span><br><span class="line"> 	 	 	   ↳	android.widget.ScrollView</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>A view group that allows the view hierarchy placed within it to be scrolled. Scroll view may have only one direct child placed within it. To add multiple views within the scroll view, make the direct child you add a view group, for example LinearLayout, and place additional views within that LinearLayout.</p>
+</blockquote>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>如官方文档描述，子控件外部嵌套一层<code>LinearLayout</code>,因为<code>ScrollView</code>是继承<code>FrameLayout</code>,<code>FrameLayout</code>的特点是所有控件均重叠防止在左上角，如果有多个子控件在<code>ScrollView</code>，无法实现滑动效果。</p>
+<h2 id="代码动态addView"><a href="#代码动态addView" class="headerlink" title="代码动态addView"></a>代码动态addView</h2><p>动态加载View，根据后台返回的数量来显示，for循环遍历，赋值，出现下图错误。修改方案在错误中有提示。要防止一个View被add多次。</p>
+<p><img src="addView.jpg" alt="error"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>很不起眼的小细节，出现错误，会浪费大量的时间，精力去分析，定位。做好记录，加深记忆。争取下次犯高级错误。</p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Liang Xiao</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="https://liangxiao5.github.io/2019/06/07/Android知识点日常记录(一)/" title="Android 知识点 日常记录（一）">https://liangxiao5.github.io/2019/06/07/Android知识点日常记录(一)/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/技术/" rel="tag"># 技术</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/02/Hexo-搭建Blog-踩坑记录/" rel="next" title="Hexo 搭建 Blog 踩坑记录">
+                <i class="fa fa-chevron-left"></i> Hexo 搭建 Blog 踩坑记录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -456,8 +648,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -573,6 +774,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#View控件INVISIBLE，GONE的区别"><span class="nav-number">1.</span> <span class="nav-text">View控件INVISIBLE，GONE的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#源码探究"><span class="nav-number">1.0.1.</span> <span class="nav-text">源码探究</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结论"><span class="nav-number">1.0.2.</span> <span class="nav-text">结论</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#ScrollView只能有一个子节点"><span class="nav-number">2.</span> <span class="nav-text">ScrollView只能有一个子节点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">2.0.1.</span> <span class="nav-text">解决方案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码动态addView"><span class="nav-number">3.</span> <span class="nav-text">代码动态addView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -747,6 +965,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -762,6 +984,8 @@
 
   
 
+
+  
 
 
   
