@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="记录人生">
+  <meta name="description" content="Git是非常流行的版本控制工具，相信程序员这个群体没有不知道Git的，熟练掌握并使用非常有必要。在工作中，多人协作，经常会出现项目冲突，导致自己本地项目跑不起来，主要是一些个人配置被提交到了代码库，导致此问题。，每次git status都会显示Untracked files ...，逼死强迫症。如何解决呢？好在Git替我们想到了，在项目根目录下面，创建一个.gitignore文件，填入需要忽略的文">
 <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gitignore通用配置">
-<meta property="og:url" content="https://liangxiao5.github.io/2019/06/07/gitignore通用配置/index.html">
+<meta property="og:title" content=".gitignore 通用配置">
+<meta property="og:url" content="https://liangxiao5.github.io/2019/06/08/gitignore通用配置/index.html">
 <meta property="og:site_name" content="Liang Xiao&#39;s Notes">
-<meta property="og:description" content="记录人生">
+<meta property="og:description" content="Git是非常流行的版本控制工具，相信程序员这个群体没有不知道Git的，熟练掌握并使用非常有必要。在工作中，多人协作，经常会出现项目冲突，导致自己本地项目跑不起来，主要是一些个人配置被提交到了代码库，导致此问题。，每次git status都会显示Untracked files ...，逼死强迫症。如何解决呢？好在Git替我们想到了，在项目根目录下面，创建一个.gitignore文件，填入需要忽略的文">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-07T14:46:41.803Z">
+<meta property="og:updated_time" content="2019-06-09T09:51:56.261Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gitignore通用配置">
-<meta name="twitter:description" content="记录人生">
+<meta name="twitter:title" content=".gitignore 通用配置">
+<meta name="twitter:description" content="Git是非常流行的版本控制工具，相信程序员这个群体没有不知道Git的，熟练掌握并使用非常有必要。在工作中，多人协作，经常会出现项目冲突，导致自己本地项目跑不起来，主要是一些个人配置被提交到了代码库，导致此问题。，每次git status都会显示Untracked files ...，逼死强迫症。如何解决呢？好在Git替我们想到了，在项目根目录下面，创建一个.gitignore文件，填入需要忽略的文">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://liangxiao5.github.io/2019/06/07/gitignore通用配置/">
+  <link rel="canonical" href="https://liangxiao5.github.io/2019/06/08/gitignore通用配置/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>gitignore通用配置 | Liang Xiao's Notes</title>
+  <title>.gitignore 通用配置 | Liang Xiao's Notes</title>
   
 
 
@@ -381,7 +381,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liangxiao5.github.io/2019/06/07/gitignore通用配置/">
+    <link itemprop="mainEntityOfPage" href="https://liangxiao5.github.io/2019/06/08/gitignore通用配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liang Xiao">
@@ -398,7 +398,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">gitignore通用配置
+          <h1 class="post-title" itemprop="name headline">.gitignore 通用配置
 
               
             
@@ -424,12 +424,24 @@
                 
               
 
-              <time title="创建时间：2019-06-07 22:45:39 / 修改时间：22:46:41" itemprop="dateCreated datePublished" datetime="2019-06-07T22:45:39+08:00">2019-06-07</time>
+              <time title="创建时间：2019-06-08 22:45:39" itemprop="dateCreated datePublished" datetime="2019-06-08T22:45:39+08:00">2019-06-08</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-09 17:51:56" itemprop="dateModified" datetime="2019-06-09T17:51:56+08:00">2019-06-09</time>
               
             
           </span>
@@ -482,7 +494,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">0字</span>
+                <span title="本文字数">2.7k字</span>
               
 
               
@@ -496,7 +508,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -516,7 +528,25 @@
       
 
       
-        
+        <p><code>Git</code>是非常流行的版本控制工具，相信程序员这个群体没有不知道Git的，熟练掌握并使用非常有必要。在工作中，多人协作，经常会出现项目冲突，导致自己本地项目跑不起来，主要是一些个人配置被提交到了代码库，导致此问题。，每次<code>git status</code>都会显示<code>Untracked files ...</code>，逼死强迫症。如何解决呢？好在<code>Git</code>替我们想到了，在项目根目录下面，创建一个<code>.gitignore</code>文件，填入需要忽略的文件路径，<code>Git</code>就会自动忽略这些文件，相当方便。我们不需要从头编写<code>.gitignore</code>文件，Github上有一个gitignore开源项目,为我们准备了各种项目所需的<code>.gitignore</code>文件，我们只需要组合使用即可。项目地址 <a href="https://github.com/github/gitignore" target="_blank" rel="noopener">.gitignore</a></p>
+<h2 id="忽略原则"><a href="#忽略原则" class="headerlink" title="忽略原则"></a>忽略原则</h2><p>拿<code>Android项目</code>举例来说：</p>
+<ul>
+<li>忽略操作系统自动生成的文件，比如：<code>.DS_Store</code>文件</li>
+<li>忽略项目自动生成的文件，比如：<code>.idea</code>文件</li>
+<li>忽略项目编译生成的文件，比如：<code>build</code>文件</li>
+<li>忽略本地带有敏感信息的配置文件，比如：存放口令与密码的配置文件</li>
+</ul>
+<h2 id="Android-gitignore文件"><a href="#Android-gitignore文件" class="headerlink" title="Android .gitignore文件"></a>Android .gitignore文件</h2><p>这是 gitignore 项目中，给出的 Android 项目 .gitignore 配置文件。可做参考。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"># Built application files</span><br><span class="line">*.apk</span><br><span class="line">*.ap_</span><br><span class="line">*.aab</span><br><span class="line"></span><br><span class="line"># Files for the ART/Dalvik VM</span><br><span class="line">*.dex</span><br><span class="line"></span><br><span class="line"># Java class files</span><br><span class="line">*.class</span><br><span class="line"></span><br><span class="line"># Generated files</span><br><span class="line">bin/</span><br><span class="line">gen/</span><br><span class="line">out/</span><br><span class="line">release/</span><br><span class="line"></span><br><span class="line"># Gradle files</span><br><span class="line">.gradle/</span><br><span class="line">build/</span><br><span class="line"></span><br><span class="line"># Local configuration file (sdk path, etc)</span><br><span class="line">local.properties</span><br><span class="line"></span><br><span class="line"># Proguard folder generated by Eclipse</span><br><span class="line">proguard/</span><br><span class="line"></span><br><span class="line"># Log Files</span><br><span class="line">*.log</span><br><span class="line"></span><br><span class="line"># Android Studio Navigation editor temp files</span><br><span class="line">.navigation/</span><br><span class="line"></span><br><span class="line"># Android Studio captures folder</span><br><span class="line">captures/</span><br><span class="line"></span><br><span class="line"># IntelliJ</span><br><span class="line">*.iml</span><br><span class="line">.idea/workspace.xml</span><br><span class="line">.idea/tasks.xml</span><br><span class="line">.idea/gradle.xml</span><br><span class="line">.idea/assetWizardSettings.xml</span><br><span class="line">.idea/dictionaries</span><br><span class="line">.idea/libraries</span><br><span class="line"># Android Studio 3 in .gitignore file.</span><br><span class="line">.idea/caches</span><br><span class="line">.idea/modules.xml</span><br><span class="line"># Comment next line if keeping position of elements in Navigation Editor is relevant for you</span><br><span class="line">.idea/navEditor.xml</span><br><span class="line"></span><br><span class="line"># Keystore files</span><br><span class="line"># Uncomment the following lines if you do not want to check your keystore files in.</span><br><span class="line">#*.jks</span><br><span class="line">#*.keystore</span><br><span class="line"></span><br><span class="line"># External native build folder generated in Android Studio 2.2 and later</span><br><span class="line">.externalNativeBuild</span><br><span class="line"></span><br><span class="line"># Google Services (e.g. APIs or Firebase)</span><br><span class="line"># google-services.json</span><br><span class="line"></span><br><span class="line"># Freeline</span><br><span class="line">freeline.py</span><br><span class="line">freeline/</span><br><span class="line">freeline_project_description.json</span><br><span class="line"></span><br><span class="line"># fastlane</span><br><span class="line">fastlane/report.xml</span><br><span class="line">fastlane/Preview.html</span><br><span class="line">fastlane/screenshots</span><br><span class="line">fastlane/test_output</span><br><span class="line">fastlane/readme.md</span><br><span class="line"></span><br><span class="line"># Version control</span><br><span class="line">vcs.xml</span><br><span class="line"></span><br><span class="line"># lint</span><br><span class="line">lint/intermediates/</span><br><span class="line">lint/generated/</span><br><span class="line">lint/outputs/</span><br><span class="line">lint/tmp/</span><br><span class="line"># lint/reports/</span><br></pre></td></tr></table></figure></p>
+<h2 id="gitignore-常用匹配语法"><a href="#gitignore-常用匹配语法" class="headerlink" title=".gitignore 常用匹配语法"></a>.gitignore 常用匹配语法</h2><p>常见的忽略匹配语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&quot;#&quot;     开头的文件表示注释，会被git忽略</span><br><span class="line"></span><br><span class="line">&quot;/&quot;     表示文件目录</span><br><span class="line">        &quot;/&quot;结束的模式只匹配文件夹以及在该文件夹路径下的内容，但是不匹配该文件；</span><br><span class="line">        &quot;/&quot;开始的模式匹配项目跟目录</span><br><span class="line"></span><br><span class="line">&quot;*&quot;     通配多个字符</span><br><span class="line"></span><br><span class="line">&quot;**&quot;    匹配任意中间目录</span><br><span class="line"></span><br><span class="line">&quot;!&quot;     表示否定，不忽略此文件</span><br></pre></td></tr></table></figure></p>
+<p>举例说明：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">*.apk   表示忽略所有 .apk 结尾的文件</span><br><span class="line"></span><br><span class="line">!lib.b  忽略文件，但是lib.b除外</span><br><span class="line"></span><br><span class="line">build/  忽略整个build文件夹</span><br><span class="line"></span><br><span class="line">/build  忽略整个项目下build文件与build文件夹</span><br><span class="line"></span><br><span class="line">*/foo:  表示忽略/foo,a/foo,a/b/foo等</span><br><span class="line"></span><br><span class="line">a/**/b: 表示忽略a/b, a/x/b,a/x/y/b等</span><br><span class="line"></span><br><span class="line">doc/*.txt 表示会忽略doc/notes.txt但不包括 doc/server/arch.txt</span><br></pre></td></tr></table></figure>
+<h2 id="已被忽略的如何加入Git"><a href="#已被忽略的如何加入Git" class="headerlink" title="已被忽略的如何加入Git"></a>已被忽略的如何加入Git</h2><p>可以使用如下命令<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add -f <span class="string">"file name"</span>  强制添加到git</span><br><span class="line"></span><br><span class="line">git rm --cached <span class="string">"file"</span>  被忽略的文件误添加，可以使用rm命令将其从中移除</span><br></pre></td></tr></table></figure></p>
+<p>或者怀疑可能是.gitignore文件写的不对，需要查看是哪里写错了，可以使用<code>git check-ignore</code>。我们可以知道是哪个规则导致忽略了文件，从而修改规则。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git check-ignore -v <span class="string">"file name"</span></span><br></pre></td></tr></table></figure>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p><code>.gitignore</code>要首先添加到版本控制中，如果在创建<code>.gitignore</code>之前已经<code>push</code>了项目，即使你在<code>.gitignore</code>文件中写入新的过滤规则，这些规则也不会起作用，<code>Git</code>仍然会对所有文件进行版本管理。</p>
+<p>如果你已经把不想上传的文件上传到了<code>Git</code>仓库，那么你必须先从远程仓库删了它，我们可以从远程仓库直接删除然后<code>pull</code>代码到本地仓库这些文件就会本删除，或者从本地删除这些文件并且在<code>.gitignore</code>文件中添加这些你想忽略的文件，然后再<code>push</code>到远程仓库。</p>
+<p>为了避免这种麻烦的操作，必须养成项目开始就创建编写<code>.gitignore</code>文件，好习惯，事半功倍。</p>
+
       
     </div>
 
@@ -550,7 +580,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liangxiao5.github.io/2019/06/07/gitignore通用配置/" title="gitignore通用配置">https://liangxiao5.github.io/2019/06/07/gitignore通用配置/</a>
+    <a href="https://liangxiao5.github.io/2019/06/08/gitignore通用配置/" title=".gitignore 通用配置">https://liangxiao5.github.io/2019/06/08/gitignore通用配置/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -628,8 +658,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -748,6 +787,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#忽略原则"><span class="nav-number">1.</span> <span class="nav-text">忽略原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android-gitignore文件"><span class="nav-number">2.</span> <span class="nav-text">Android .gitignore文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gitignore-常用匹配语法"><span class="nav-number">3.</span> <span class="nav-text">.gitignore 常用匹配语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#已被忽略的如何加入Git"><span class="nav-number">4.</span> <span class="nav-text">已被忽略的如何加入Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结："><span class="nav-number">5.</span> <span class="nav-text">总结：</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -776,7 +832,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">6k</span>
+    <span title="站点总字数">9k</span>
   
 
   
@@ -787,7 +843,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">6 分钟</span>
+    <span title="站点阅读时长">8 分钟</span>
   
 </div>
 
