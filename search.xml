@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[WebView使用踩坑记录]]></title>
+    <url>%2F2019%2F08%2F26%2FWebView%E4%BD%BF%E7%94%A8%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[大前端是趋势，最近有两个项目涉及到原生跟H5嵌套以及交互，那WebView必不可少，以为会很顺利，结果这中间还是踩了不少坑。 H5调用相机无反应H5集成进来之后，测试发现，点击调起相机，无反应，然后IOS是正常的，我….好吧，Android就是这么独特。 Google了一番，发现，高版本的Android系统，WebView出于安全性考虑，限制H5访问本地文件。需要重写 WebviewChromeClient中的 openFileChooser()和onShowFileChooser()方法响应H5的&lt;input type=&quot;file&quot;&gt;,使用原生代码来调用本地相机和相册，然后在onActiivtyResult把选择的图片 URI 回传给 WebviewChromeClient。具体使用方式，网络有很多，这里有不详细介绍了，只记录下解题思路。 百度地图定位偏差项目中因为客户要求定位必须使用百度地图，所以，就出现了定位偏差的问题，IOS继续正常，Android定位偏差，继续填坑。H5通过IP定位，精度不好，有好几种解决方案。12341.H5先用高德地图定位，然后显示在百度地图上2.降低targetSdkVersion版本到233.升级Http到Https4.使用原生定位方法，将位置信息传给H5 方案1 任务量是H5的，无能为力方案2 试了一下，没效果方案3 Https升级要Money，So，忽略方案4 使用WebView的JavascriptInterface开接口给JS。 缓存问题同事写了一个加载WebView的模板，就无脑用了，如果出现网络异常，页面空白，网络正常后，还是空白页面，然后清除掉缓存就好了。额。。。然后就发现了如下这个配置：12345678如下设置项：//关闭webView中的缓存webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);LOAD_CACHE_ELSE_NETWORK：只要本地有缓存，就从缓存中读取数据。LOAD_DEFAULT：根据 Http 协议，决定是否从网络获取数据。LOAD_NO_CACHE：不使用缓存，只从网络获取数据。LOAD_CACHE_ONLY：不使用网络，只读本地缓存。 显示过小，缩放WebView加载H5，显示很小，必须手势放大才可以，隐藏掉如下配置：12345678910111213 //设置自适应屏幕，两者合用// webSettings.setUseWideViewPort(true);//将图片调整到合适webview的大小// webSettings.setLoadWithOverviewMode(true);//缩放至屏幕的大小// webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN); //支持缩放，默认为true，是下面的前提// webSettings.setSupportZoom(true); //设置内置的缩放控件，若上面是false，则该webview不可缩放，这个不管设置什么都不能缩放// webSettings.setBuiltInZoomControls(true);// webSettings.setDefaultZoom(WebSettings.ZoomDensity.FAR); //隐藏原生的缩放控件// webSettings.setDisplayZoomControls(false); H5页面跳转，隐藏底部toolBar底部toolBar的某一个操作项集成了H5，进入H5之后，底部的toolBar仍然存在，需要隐藏掉toolBar，重写WebViewClient的shouldOverrideUrlLoading()方法，URL给出标志，判断URL是否包含隐藏toolBar标志，如果包含，toolBar隐藏掉不显示。]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Android知识点日常记录(二)]]></title>
     <url>%2F2019%2F06%2F16%2FAndroid%E7%9F%A5%E8%AF%86%E7%82%B9%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95-%E4%BA%8C%2F</url>
     <content type="text"><![CDATA[好记性不如烂笔头，知识点又来了。最近工作相当充实，体验了一把互联网公司的 996，累到只想睡觉。晚上抽空把知识点整理一下。 TextView Hint使用坑点一般APP会设计提示语，有输入内容的时候提示语消失，没有输入内容的话，就显示提示语，一般会使用控件的Hint属性,分分钟解决设计。但是最近我在项目中，使用这个Hint发现了一个问题，输入内容少于Hint内容，界面会显示异常，界面显示包含了Hint的长度。如果输入内容大于Hint内容，显示不会出现异常。很神奇的现象。 解决方案一种很简单粗暴的解决方案：设置文本内容显示在控件的右边。因为默认文本显示是居左，修改文本显示后，宽度以Hint宽度为基准，导致显示异常，出现空白。1android:gravity=&quot;right&quot; 网络请求 Token之前一直没有机会去调试接口，最近却被调接口虐到，有一个接口，Postman访问，接口请求正常，返回数据正常，但是自己就是拿不到数据。因为是维护别人的代码，就没仔细看，大致看了下，感觉没错。后台怀疑没传token，可是代码里面传了token，最后才发现，token传错了位置，传到了body里面。这低级错误，简直…… 修改网络请求，header中传入token，接口访问正常。 Fresco 框架 wrap_contentAndroid图片加载库很多，最近使用Facebook的一款图片加载库，很简单，使用之后，发现图片显示不了。查看官方文档，不支持Wrap_content，What ？文档链接如下： 为什么不支持wrap_content 解决方案原因官方已经解释的很清楚了，我们可以参照StackOverflow上的解决方案，也可以设置宽高比来解决图片不显示的问题。宽高比方案代码如下：1234&lt;com.facebook.drawee.view.SimpleDraweeView android:layout_width="wrap_content" fresco:viewAspectRatio="1" android:layout_height="100dp" /&gt; PS：宽高比方案，必须固定一边高度，另一边设置wrap_content与fresco:viewAspectRatio属性。]]></content>
