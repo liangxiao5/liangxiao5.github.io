@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="Android">
+  <meta name="description" content="ScrollView嵌套RecyclerView数据显示不全解决方案查看代码，布局中没有给RecycleView设置layoutManager，发现是代码中动态设置的。12345678LinearLayoutManager classifyDataManager = new LinearLayoutManager(this) &amp;#123;          @Override          p">
+<meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://liangxiao5.github.io/2019/05/28/hello-world/index.html">
+<meta property="og:title" content="Android知识点日常记录(三)">
+<meta property="og:url" content="https://liangxiao5.github.io/2019/09/02/Android知识点日常记录-三/index.html">
 <meta property="og:site_name" content="Liang Xiao&#39;s Notes">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="ScrollView嵌套RecyclerView数据显示不全解决方案查看代码，布局中没有给RecycleView设置layoutManager，发现是代码中动态设置的。12345678LinearLayoutManager classifyDataManager = new LinearLayoutManager(this) &amp;#123;          @Override          p">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-28T13:25:17.326Z">
+<meta property="og:updated_time" content="2019-09-03T14:57:56.320Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Android知识点日常记录(三)">
+<meta name="twitter:description" content="ScrollView嵌套RecyclerView数据显示不全解决方案查看代码，布局中没有给RecycleView设置layoutManager，发现是代码中动态设置的。12345678LinearLayoutManager classifyDataManager = new LinearLayoutManager(this) &amp;#123;          @Override          p">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://liangxiao5.github.io/2019/05/28/hello-world/">
+  <link rel="canonical" href="https://liangxiao5.github.io/2019/09/02/Android知识点日常记录-三/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>Hello World | Liang Xiao's Notes</title>
+  <title>Android知识点日常记录(三) | Liang Xiao's Notes</title>
   
 
 
@@ -381,7 +381,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liangxiao5.github.io/2019/05/28/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://liangxiao5.github.io/2019/09/02/Android知识点日常记录-三/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liang Xiao">
@@ -398,7 +398,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World
+          <h1 class="post-title" itemprop="name headline">Android知识点日常记录(三)
 
               
             
@@ -424,12 +424,46 @@
                 
               
 
-              <time title="创建时间：2019-05-28 21:25:17" itemprop="dateCreated datePublished" datetime="2019-05-28T21:25:17+08:00">2019-05-28</time>
+              <time title="创建时间：2019-09-02 09:04:48" itemprop="dateCreated datePublished" datetime="2019-09-02T09:04:48+08:00">2019-09-02</time>
             
 
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-03 22:57:56" itemprop="dateModified" datetime="2019-09-03T22:57:56+08:00">2019-09-03</time>
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -460,7 +494,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">426字</span>
+                <span title="本文字数">1.9k字</span>
               
 
               
@@ -474,7 +508,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -494,15 +528,14 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="ScrollView嵌套RecyclerView数据显示不全"><a href="#ScrollView嵌套RecyclerView数据显示不全" class="headerlink" title="ScrollView嵌套RecyclerView数据显示不全"></a>ScrollView嵌套RecyclerView数据显示不全</h2><h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>查看代码，布局中没有给RecycleView设置layoutManager，发现是代码中动态设置的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">LinearLayoutManager classifyDataManager = new LinearLayoutManager(this) &#123;</span><br><span class="line">          @Override</span><br><span class="line">          public boolean canScrollVertically() &#123;</span><br><span class="line">              return false;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;;</span><br><span class="line">      //配置布局，默认为vertical（垂直布局）</span><br><span class="line">      classifyDataManager.setOrientation(LinearLayoutManager.VERTICAL);</span><br></pre></td></tr></table></figure></p>
+<p>字面意思理解，<code>canScrollVertically()</code>方法<code>return false</code>，可能是数据显示不全的原因，试着改为<code>return true</code>，测试了下，数据显示正常了，<code>RecycleView</code>的数据必须通过滑动来查看，跟<code>ScrollView</code>滑动响应不一致，导致用户体验不好。</p>
+<h4 id="优化方案"><a href="#优化方案" class="headerlink" title="优化方案"></a>优化方案</h4><p>查找资料，发现了一个<code>NestedScrollView</code>可以替换<code>ScrollView</code>,<code>NestedScrollView</code>的名字中其实就可以看出他的作用了，<code>Nested</code>是嵌套的意思。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">最终解决方案ScrollView换为</span><br><span class="line">&lt;android.support.v4.widget.NestedScrollView&gt;问题解决了</span><br></pre></td></tr></table></figure></p>
+<h2 id="系统通知，点击消息未消失"><a href="#系统通知，点击消息未消失" class="headerlink" title="系统通知，点击消息未消失"></a>系统通知，点击消息未消失</h2><p>项目中推送消息，使用MQTT协议来实现，拿到消息后，显示一个<code>Notification</code>,点击后，<code>Notification</code>未消失。增加如下两个属性。<code>setContentIntent()</code>与<code>setAutoCancel()</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Notification.Builder builder = new Notification.Builder(this);</span><br><span class="line">builder</span><br><span class="line">.setContentIntent(contentIntent)</span><br><span class="line">.setAutoCancel(true);</span><br></pre></td></tr></table></figure></p>
+<h2 id="OkHttp上传图片服务器无法获取的问题"><a href="#OkHttp上传图片服务器无法获取的问题" class="headerlink" title="OkHttp上传图片服务器无法获取的问题"></a>OkHttp上传图片服务器无法获取的问题</h2><p>测试在现场提出一个问题，发布任务带图片，就发送失败，客户端网络请求走到了<code>onFailure()</code>，但是用PostMan测试，又能正常上传，Google发现，在OkHttp请求的时候，setType()设置的<code>MultipartBody.FORM</code>，未指定编码，导致服务器无法解析此请求，导致请求失败。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">错误请求设置：</span><br><span class="line">MultipartBody.Builder builder=new MultipartBody.Builder() .setType(MultipartBody.FORM);</span><br><span class="line"></span><br><span class="line">正确请求设置：           </span><br><span class="line">MultipartBody.Builder builder = new MultipartBody.Builder().setType(MediaType.parse(&quot;multipart/form-data;charset=utf-8&quot;));</span><br></pre></td></tr></table></figure></p>
+<h2 id="相见恨晚的CountDownTimer"><a href="#相见恨晚的CountDownTimer" class="headerlink" title="相见恨晚的CountDownTimer"></a>相见恨晚的CountDownTimer</h2><p>一般项目中注册发送验证码都会有一个倒计时的功能，以前的实现方式就是使用<code>Handler+Thread</code>方式，既然有了<code>CountDownTimer</code>，就不用那么复杂了，直接使用如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">new CountDownTimer(30000, 1000) &#123;</span><br><span class="line"></span><br><span class="line">    public void onTick(long millisUntilFinished) &#123;</span><br><span class="line">        mTextField.setText(millisUntilFinished / 1000) + &quot;秒后可重发&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void onFinish() &#123;</span><br><span class="line">        mTextField.setText(&quot;done!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;.start();</span><br></pre></td></tr></table></figure></p>
+<p><code>CountDownTimer</code>每隔1秒调用一次<code>onTick(long millisUntilFinished)</code>方法, 倒计时结束时调用<code>onFinish()</code>方法.</p>
+<p><code>CountDownTimer</code>是运行在主线程，可以直接更新UI</p>
 
       
     </div>
@@ -537,7 +570,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liangxiao5.github.io/2019/05/28/hello-world/" title="Hello World">https://liangxiao5.github.io/2019/05/28/hello-world/</a>
+    <a href="https://liangxiao5.github.io/2019/09/02/Android知识点日常记录-三/" title="Android知识点日常记录(三)">https://liangxiao5.github.io/2019/09/02/Android知识点日常记录-三/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -548,6 +581,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/技术/" rel="tag"># 技术</a>
+          
+        </div>
+      
 
       
       
@@ -557,15 +596,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/08/26/WebView使用踩坑记录/" rel="next" title="WebView使用踩坑记录">
+                <i class="fa fa-chevron-left"></i> WebView使用踩坑记录
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/28/第一篇Blog/" rel="prev" title="第一篇 Blog">
-                第一篇 Blog <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -748,7 +787,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ScrollView嵌套RecyclerView数据显示不全"><span class="nav-number">1.</span> <span class="nav-text">ScrollView嵌套RecyclerView数据显示不全</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">1.0.1.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优化方案"><span class="nav-number">1.0.2.</span> <span class="nav-text">优化方案</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#系统通知，点击消息未消失"><span class="nav-number">2.</span> <span class="nav-text">系统通知，点击消息未消失</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OkHttp上传图片服务器无法获取的问题"><span class="nav-number">3.</span> <span class="nav-text">OkHttp上传图片服务器无法获取的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相见恨晚的CountDownTimer"><span class="nav-number">4.</span> <span class="nav-text">相见恨晚的CountDownTimer</span></a></li></div>
             
 
           </div>
