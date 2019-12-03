@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="EventBus使用很早之前就听过EventBus这个神器了，因为参与了新项目，维护同事的代码，全部用的是EventBus，确实很好用，很简单。 ####">
+  <meta name="description" content="EventBus 使用很早之前就听过 EventBus 这个神器了，因为参与了新项目，维护同事的代码，全部用的是 EventBus，有必要学习一下。Android 原生的广播，实际项目中使用的确实是比较少，除非是一些 ROM 开发。我们是实用主义者，所以就先记录如何使用，然后等会用后再去研究原理。 确保EventBus 已添加到项目依赖。 1. 定义EventEvent 没有特殊要求，就是普通的">
 <meta name="keywords" content="工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EventBus学习">
 <meta property="og:url" content="https://liangxiao5.github.io/2019/09/04/EventBus学习/index.html">
 <meta property="og:site_name" content="Liang Xiao&#39;s Notes">
-<meta property="og:description" content="EventBus使用很早之前就听过EventBus这个神器了，因为参与了新项目，维护同事的代码，全部用的是EventBus，确实很好用，很简单。 ####">
+<meta property="og:description" content="EventBus 使用很早之前就听过 EventBus 这个神器了，因为参与了新项目，维护同事的代码，全部用的是 EventBus，有必要学习一下。Android 原生的广播，实际项目中使用的确实是比较少，除非是一些 ROM 开发。我们是实用主义者，所以就先记录如何使用，然后等会用后再去研究原理。 确保EventBus 已添加到项目依赖。 1. 定义EventEvent 没有特殊要求，就是普通的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-26T02:38:01.587Z">
+<meta property="og:updated_time" content="2019-12-03T11:01:57.973Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="EventBus学习">
-<meta name="twitter:description" content="EventBus使用很早之前就听过EventBus这个神器了，因为参与了新项目，维护同事的代码，全部用的是EventBus，确实很好用，很简单。 ####">
+<meta name="twitter:description" content="EventBus 使用很早之前就听过 EventBus 这个神器了，因为参与了新项目，维护同事的代码，全部用的是 EventBus，有必要学习一下。Android 原生的广播，实际项目中使用的确实是比较少，除非是一些 ROM 开发。我们是实用主义者，所以就先记录如何使用，然后等会用后再去研究原理。 确保EventBus 已添加到项目依赖。 1. 定义EventEvent 没有特殊要求，就是普通的">
 
 
 
@@ -441,7 +441,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-26 10:38:01" itemprop="dateModified" datetime="2019-09-26T10:38:01+08:00">2019-09-26</time>
+                <time title="修改时间：2019-12-03 19:01:57" itemprop="dateModified" datetime="2019-12-03T19:01:57+08:00">2019-12-03</time>
               
             
           </span>
@@ -494,7 +494,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">79字</span>
+                <span title="本文字数">2.1k字</span>
               
 
               
@@ -508,7 +508,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -528,8 +528,22 @@
       
 
       
-        <h2 id="EventBus使用"><a href="#EventBus使用" class="headerlink" title="EventBus使用"></a>EventBus使用</h2><p>很早之前就听过EventBus这个神器了，因为参与了新项目，维护同事的代码，全部用的是EventBus，确实很好用，很简单。</p>
-<p>#### </p>
+        <h2 id="EventBus-使用"><a href="#EventBus-使用" class="headerlink" title="EventBus 使用"></a>EventBus 使用</h2><p>很早之前就听过 EventBus 这个神器了，因为参与了新项目，维护同事的代码，全部用的是 EventBus，有必要学习一下。Android 原生的广播，实际项目中使用的确实是比较少，除非是一些 ROM 开发。我们是实用主义者，所以就先记录如何使用，然后等会用后再去研究原理。</p>
+<p>确保EventBus 已添加到项目依赖。</p>
+<h4 id="1-定义Event"><a href="#1-定义Event" class="headerlink" title="1. 定义Event"></a>1. 定义Event</h4><p>Event 没有特殊要求，就是普通的 Java 对象。例如下面的代码，如果不需要传值，可以只写一个空类。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class MessageEvent &#123;</span><br><span class="line">    public final String message;</span><br><span class="line">    public MessageEvent(String message) &#123;</span><br><span class="line">        this.message = message;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-Subscriber订阅者"><a href="#2-Subscriber订阅者" class="headerlink" title="2. Subscriber订阅者"></a>2. Subscriber订阅者</h4><p>Subscriber 实现 Event 处理，实现的方法在事件被发布的时调用。Subscriber 方法使用 @subscribe 注解定义。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// This method will be called when a MessageEvent is posted (in the UI thread for Toast)</span><br><span class="line">@Subscribe(threadMode = ThreadMode.MAIN)</span><br><span class="line">public void onMessageEvent(MessageEvent event) &#123;</span><br><span class="line">    Toast.makeText(getActivity(), event.message, Toast.LENGTH_SHORT).show();</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">// This method will be called when a SomeOtherEvent is posted</span><br><span class="line">@Subscribe</span><br><span class="line">public void handleSomethingElse(SomeOtherEvent event) &#123;</span><br><span class="line">    doSomethingWith(event);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>PS: 对于 EventBus 3，方法名可以自由选择（没有 EventBus 2 中的命名约定）。</p>
+<h4 id="2-1-注册EventBus"><a href="#2-1-注册EventBus" class="headerlink" title="2.1 注册EventBus"></a>2.1 注册EventBus</h4><p>Subscriber 只有在注册后才可以接收到事件。对于 Android ，在 Activity 和 Fragment 中通常应该根据生命周期注册。对于大多数情况，分别在 onStart 和 onStop 注册和反注册就可以，如下代码，也可以根据情况，在 onCreate，或者 onDestroy 中注册和反注册。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onStart() &#123;</span><br><span class="line">    super.onStart();</span><br><span class="line">    EventBus.getDefault().register(this);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">@Override</span><br><span class="line">public void onStop() &#123;</span><br><span class="line">    EventBus.getDefault().unregister(this);</span><br><span class="line">    super.onStop();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="3-发布Event"><a href="#3-发布Event" class="headerlink" title="3. 发布Event"></a>3. 发布Event</h4><p>代码中的任意部分都可以发布事件。所有已注册并且匹配该类型的 Subscriber（订阅者）都会收到该事件.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EventBus.getDefault().post(new MessageEvent(&quot;Hello everyone!&quot;));</span><br></pre></td></tr></table></figure></p>
+<h2 id="ThreadMode"><a href="#ThreadMode" class="headerlink" title="ThreadMode"></a>ThreadMode</h2><p>EventBus不仅可以处理传递信息，还可以处理线程切换问题。事件可以发布到与发布线程不同的线程中。</p>
+<p>对于 Android，UI 改变必须发生在 UI（main）线程中。另一方面，网络请求或其他任何耗时的任务不得在主线程上运行。EventBus 可以处理这些问题，并与 UI 线程保持协调。</p>
+<p>主要有以下四种线程模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ThreadMode:POSTING（默认）</span><br><span class="line">ThreadMode:MAIN</span><br><span class="line">ThreadMode:MAIN_ORDERED</span><br><span class="line">ThreadMode:BACKGROUND</span><br><span class="line">ThreadMode:ASYNC</span><br></pre></td></tr></table></figure></p>
+<p>查看了官方的英文文档，MAIN 与 MAIN_ORDERED 模式，Subscriber 都是运行在主线程的，区别是 MAIN_ORDERED 保证了事件处理有一个更严格一致的顺序。</p>
+<p>比如，在 MAIN 模式下，处理事件的时候发布另一个事件，则第二个事件将先于第一个事件被处理完成（此处为同步调用，可与方法调用类比）。而对于 MAIN_ORDERED，第一个事件将先被完成处理，然后第二个事件在稍后的时间点（一旦主线程有处理能力时）被处理。</p>
+<p>BACKGROUND 事件回调将在后台线程中被调用。如果发布事件的线程不是主线程，事件回调将直接在发布线程被调用。否则，EventBus 使用一个后台线程（单例）来按序调用每个回调</p>
+<p>ASYNC 事件回调方法总是在单独的线程被调用。这些线程不会是发布事件的线程，也不会是主线程。</p>
+<p><a href="http://greenrobot.org/eventbus/documentation/" target="_blank" rel="noopener">官方文档</a></p>
 
       
     </div>
@@ -791,7 +805,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EventBus使用"><span class="nav-number">1.</span> <span class="nav-text">EventBus使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EventBus-使用"><span class="nav-number">1.</span> <span class="nav-text">EventBus 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-定义Event"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 定义Event</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Subscriber订阅者"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. Subscriber订阅者</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-注册EventBus"><span class="nav-number">1.0.3.</span> <span class="nav-text">2.1 注册EventBus</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-发布Event"><span class="nav-number">1.0.4.</span> <span class="nav-text">3. 发布Event</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#ThreadMode"><span class="nav-number">2.</span> <span class="nav-text">ThreadMode</span></a></li></div>
             
 
           </div>
@@ -826,7 +840,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">18k</span>
+    <span title="站点总字数">20k</span>
   
 
   
@@ -837,7 +851,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">16 分钟</span>
+    <span title="站点阅读时长">18 分钟</span>
   
 </div>
 
