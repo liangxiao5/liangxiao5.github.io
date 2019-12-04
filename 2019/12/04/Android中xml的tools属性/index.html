@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="ScrollView嵌套RecyclerView数据显示不全解决方案查看代码，布局中没有给RecycleView设置layoutManager，发现是代码中动态设置的。12345678LinearLayoutManager classifyDataManager = new LinearLayoutManager(this) &amp;#123;          @Override          p">
+  <meta name="description" content="Android 开发过程中，布局文件是可以直接在 IDE 中看到效果的，有时候有些布局的效果是根据网络请求的结果来展示，我们在写布局的时候，为了查看布局的美观，就直接写固定值了。 比如这种情况：TextView 在 xml 中没有设置任何字符，而是在 activity 中设置了 text。因此为了在 IDE 中预览效果，你必须在 xml 中为 TextView 控件设置 android:text">
 <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android知识点日常记录(三)">
-<meta property="og:url" content="https://liangxiao5.github.io/2019/09/02/Android知识点日常记录-三/index.html">
+<meta property="og:title" content="Android中xml的tools属性">
+<meta property="og:url" content="https://liangxiao5.github.io/2019/12/04/Android中xml的tools属性/index.html">
 <meta property="og:site_name" content="Liang Xiao&#39;s Notes">
-<meta property="og:description" content="ScrollView嵌套RecyclerView数据显示不全解决方案查看代码，布局中没有给RecycleView设置layoutManager，发现是代码中动态设置的。12345678LinearLayoutManager classifyDataManager = new LinearLayoutManager(this) &amp;#123;          @Override          p">
+<meta property="og:description" content="Android 开发过程中，布局文件是可以直接在 IDE 中看到效果的，有时候有些布局的效果是根据网络请求的结果来展示，我们在写布局的时候，为了查看布局的美观，就直接写固定值了。 比如这种情况：TextView 在 xml 中没有设置任何字符，而是在 activity 中设置了 text。因此为了在 IDE 中预览效果，你必须在 xml 中为 TextView 控件设置 android:text">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-03T15:03:46.259Z">
+<meta property="og:updated_time" content="2019-12-04T02:33:34.675Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android知识点日常记录(三)">
-<meta name="twitter:description" content="ScrollView嵌套RecyclerView数据显示不全解决方案查看代码，布局中没有给RecycleView设置layoutManager，发现是代码中动态设置的。12345678LinearLayoutManager classifyDataManager = new LinearLayoutManager(this) &amp;#123;          @Override          p">
+<meta name="twitter:title" content="Android中xml的tools属性">
+<meta name="twitter:description" content="Android 开发过程中，布局文件是可以直接在 IDE 中看到效果的，有时候有些布局的效果是根据网络请求的结果来展示，我们在写布局的时候，为了查看布局的美观，就直接写固定值了。 比如这种情况：TextView 在 xml 中没有设置任何字符，而是在 activity 中设置了 text。因此为了在 IDE 中预览效果，你必须在 xml 中为 TextView 控件设置 android:text">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://liangxiao5.github.io/2019/09/02/Android知识点日常记录-三/">
+  <link rel="canonical" href="https://liangxiao5.github.io/2019/12/04/Android中xml的tools属性/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>Android知识点日常记录(三) | Liang Xiao's Notes</title>
+  <title>Android中xml的tools属性 | Liang Xiao's Notes</title>
   
 
 
@@ -381,7 +381,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liangxiao5.github.io/2019/09/02/Android知识点日常记录-三/">
+    <link itemprop="mainEntityOfPage" href="https://liangxiao5.github.io/2019/12/04/Android中xml的tools属性/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liang Xiao">
@@ -398,7 +398,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Android知识点日常记录(三)
+          <h1 class="post-title" itemprop="name headline">Android中xml的tools属性
 
               
             
@@ -424,24 +424,12 @@
                 
               
 
-              <time title="创建时间：2019-09-02 09:04:48" itemprop="dateCreated datePublished" datetime="2019-09-02T09:04:48+08:00">2019-09-02</time>
+              <time title="创建时间：2019-12-04 09:29:47 / 修改时间：10:33:34" itemprop="dateCreated datePublished" datetime="2019-12-04T09:29:47+08:00">2019-12-04</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-09-03 23:03:46" itemprop="dateModified" datetime="2019-09-03T23:03:46+08:00">2019-09-03</time>
               
             
           </span>
@@ -494,7 +482,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.9k字</span>
+                <span title="本文字数">1.6k字</span>
               
 
               
@@ -508,7 +496,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -528,14 +516,25 @@
       
 
       
-        <h2 id="ScrollView嵌套RecyclerView数据显示不全"><a href="#ScrollView嵌套RecyclerView数据显示不全" class="headerlink" title="ScrollView嵌套RecyclerView数据显示不全"></a>ScrollView嵌套RecyclerView数据显示不全</h2><h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>查看代码，布局中没有给RecycleView设置layoutManager，发现是代码中动态设置的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">LinearLayoutManager classifyDataManager = new LinearLayoutManager(this) &#123;</span><br><span class="line">          @Override</span><br><span class="line">          public boolean canScrollVertically() &#123;</span><br><span class="line">              return false;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;;</span><br><span class="line">      //配置布局，默认为vertical（垂直布局）</span><br><span class="line">      classifyDataManager.setOrientation(LinearLayoutManager.VERTICAL);</span><br></pre></td></tr></table></figure></p>
-<p>字面意思理解，<code>canScrollVertically()</code>方法<code>return false</code>，可能是数据显示不全的原因，试着改为<code>return true</code>，测试了下，数据显示正常了，<code>RecycleView</code>的数据必须通过滑动来查看，跟<code>ScrollView</code>滑动响应不一致，导致用户体验不好。</p>
-<h4 id="优化方案"><a href="#优化方案" class="headerlink" title="优化方案"></a>优化方案</h4><p>查找资料，发现了一个<code>NestedScrollView</code>可以替换<code>ScrollView</code>,<code>NestedScrollView</code>的名字中其实就可以看出他的作用了，<code>Nested</code>是嵌套的意思。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">最终解决方案ScrollView换为</span><br><span class="line">&lt;android.support.v4.widget.NestedScrollView&gt;问题解决了</span><br></pre></td></tr></table></figure></p>
-<h2 id="系统通知，点击消息未消失"><a href="#系统通知，点击消息未消失" class="headerlink" title="系统通知，点击消息未消失"></a>系统通知，点击消息未消失</h2><p>项目中推送消息，使用MQTT协议来实现，拿到消息后，显示一个<code>Notification</code>,点击后，<code>Notification</code>未消失。增加如下两个属性。<code>setContentIntent()</code>与<code>setAutoCancel()</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Notification.Builder builder = new Notification.Builder(this);</span><br><span class="line">builder</span><br><span class="line">.setContentIntent(contentIntent)</span><br><span class="line">.setAutoCancel(true);</span><br></pre></td></tr></table></figure></p>
-<h2 id="OkHttp上传图片服务器无法获取的问题"><a href="#OkHttp上传图片服务器无法获取的问题" class="headerlink" title="OkHttp上传图片服务器无法获取的问题"></a>OkHttp上传图片服务器无法获取的问题</h2><p>测试在现场提出一个问题，发布任务带图片，就发送失败，客户端网络请求走到了<code>onFailure()</code>，但是用PostMan测试，又能正常上传，Google发现，在OkHttp请求的时候，setType()设置的<code>MultipartBody.FORM</code>，未指定编码，导致服务器无法解析此请求，导致请求失败。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">错误请求设置：</span><br><span class="line">MultipartBody.Builder builder=new MultipartBody.Builder() .setType(MultipartBody.FORM);</span><br><span class="line"></span><br><span class="line">正确请求设置：           </span><br><span class="line">MultipartBody.Builder builder = new MultipartBody.Builder().setType(MediaType.parse(&quot;multipart/form-data;charset=utf-8&quot;));</span><br></pre></td></tr></table></figure></p>
-<h2 id="相见恨晚的CountDownTimer"><a href="#相见恨晚的CountDownTimer" class="headerlink" title="相见恨晚的CountDownTimer"></a>相见恨晚的CountDownTimer</h2><p>一般项目中注册发送验证码都会有一个倒计时的功能，以前的实现方式就是使用<code>Handler+Thread</code><a href="https://juejin.im/post/5a16369df265da432002e7fb" target="_blank" rel="noopener">方式</a>，既然有了<code>CountDownTimer</code>，就不用那么复杂了，直接使用如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">new CountDownTimer(30000, 1000) &#123;</span><br><span class="line"></span><br><span class="line">    public void onTick(long millisUntilFinished) &#123;</span><br><span class="line">        mTextField.setText(millisUntilFinished / 1000) + &quot;秒后可重发&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void onFinish() &#123;</span><br><span class="line">        mTextField.setText(&quot;done!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;.start();</span><br></pre></td></tr></table></figure></p>
-<p>CountDownTimer每隔1秒调用一次<code>onTick(long millisUntilFinished)</code>方法, 倒计时结束时调用<code>onFinish()</code>方法.</p>
-<p><code>CountDownTimer</code>是运行在主线程，可以直接更新UI</p>
+        <p>Android 开发过程中，布局文件是可以直接在 IDE 中看到效果的，有时候有些布局的效果是根据网络请求的结果来展示，我们在写布局的时候，为了查看布局的美观，就直接写固定值了。</p>
+<p>比如这种情况：TextView 在 xml 中没有设置任何字符，而是在 activity 中设置了 text。因此为了在 IDE 中预览效果，你必须在 xml 中为 TextView 控件设置 android:text 属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;TextView</span><br><span class="line">    android:id=&quot;@+id/tv_name&quot;</span><br><span class="line">    android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">    android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">    android:text=&quot;Hello World&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>有些布局界面可能是需要固定值，但是根据网络请求来显示的话，如果我们这样写忘记删除的话，就会导致一些问题，明明不应该显示的地方，确显示了，还得花时间去定位问题，即使没有显示问题，最终的产品中一直都有这种代码。</p>
+<h2 id="tools-属性"><a href="#tools-属性" class="headerlink" title="tools 属性"></a>tools 属性</h2><p>上面的情况，我们是有方法避免的，可以使用tools的命名空间和属性来解决这个问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">xmlns:tools=&quot;http://schemas.android.com/tools&quot;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">&lt;TextView</span><br><span class="line">    android:id=&quot;@+id/tv_name&quot;</span><br><span class="line">    android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">    android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">    tools:text=&quot;Hello World&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>tools 属性可以告诉Android Studio ，这些属性在运行时是被忽略的，只在设计布局的时候有效。比如上面的例子，Hello World 只在设计布局的时候展示，运行后的界面是不会显示Hello World 的。</p>
+<p><strong>tools 可以覆盖 xml 布局中 android 的所有标准属性，将 android: 换成 tools: 即可。同时在运行的时候就连tools:本身都是被忽略的，不会被带进apk中。</strong></p>
+<h2 id="tools-属性种类"><a href="#tools-属性种类" class="headerlink" title="tools 属性种类"></a>tools 属性种类</h2><p>tools 属性分为两种，一种是关于 xml 布局设计的，一种是影响 Lint 提示的，上面介绍的是 tools 最基本的用法，在 UI 设计的时候覆盖标准的 android 属性。下面介绍 Lint 相关属性。</p>
+<h4 id="Lint-相关属性"><a href="#Lint-相关属性" class="headerlink" title="Lint 相关属性"></a>Lint 相关属性</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tools:ignore    ignore属性是告诉Lint忽略xml中的某些警告。</span><br><span class="line">tools:targetApi  </span><br><span class="line">tools:locale</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Lint会提示 ImageView 缺少 android:contentDescription 属性。我们可以使用 tools:ignore 来忽略这个警告</p>
+</li>
+<li><p>假设minSdkLevel 15，而你使用了api21中的控件比如RippleDrawable,则Lint会提示警告。为了不显示这个警告，可以使用 tools:targetApi=”LOLLIPOP”。</p>
+</li>
+<li><p>默认情况下 res/values/strings.xml 中的字符串会执行拼写检查，如果不是英语，会提示拼写错误，通过 tools:locale=”it” 来告诉studio本地语言不是英语，就不会有提示了。</p>
+</li>
+</ul>
+<p><strong>PS:</strong> 关于忽略Lint 的属性，了解就好，一般不常用，也不影响编译。</p>
+<p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0309/2567.html" target="_blank" rel="noopener">参考文档</a></p>
 
       
     </div>
@@ -570,7 +569,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://liangxiao5.github.io/2019/09/02/Android知识点日常记录-三/" title="Android知识点日常记录(三)">https://liangxiao5.github.io/2019/09/02/Android知识点日常记录-三/</a>
+    <a href="https://liangxiao5.github.io/2019/12/04/Android中xml的tools属性/" title="Android中xml的tools属性">https://liangxiao5.github.io/2019/12/04/Android中xml的tools属性/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -596,8 +595,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/26/WebView使用踩坑记录/" rel="next" title="WebView使用踩坑记录">
-                <i class="fa fa-chevron-left"></i> WebView使用踩坑记录
+              <a href="/2019/11/06/Android知识点日常记录-五/" rel="next" title="Android知识点日常记录(五)">
+                <i class="fa fa-chevron-left"></i> Android知识点日常记录(五)
               </a>
             
           </div>
@@ -605,10 +604,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/04/EventBus学习/" rel="prev" title="EventBus学习">
-                EventBus学习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -797,7 +792,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ScrollView嵌套RecyclerView数据显示不全"><span class="nav-number">1.</span> <span class="nav-text">ScrollView嵌套RecyclerView数据显示不全</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">1.0.1.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优化方案"><span class="nav-number">1.0.2.</span> <span class="nav-text">优化方案</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#系统通知，点击消息未消失"><span class="nav-number">2.</span> <span class="nav-text">系统通知，点击消息未消失</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OkHttp上传图片服务器无法获取的问题"><span class="nav-number">3.</span> <span class="nav-text">OkHttp上传图片服务器无法获取的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相见恨晚的CountDownTimer"><span class="nav-number">4.</span> <span class="nav-text">相见恨晚的CountDownTimer</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tools-属性"><span class="nav-number">1.</span> <span class="nav-text">tools 属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tools-属性种类"><span class="nav-number">2.</span> <span class="nav-text">tools 属性种类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lint-相关属性"><span class="nav-number">2.0.1.</span> <span class="nav-text">Lint 相关属性</span></a></li></ol></li></ol></div>
             
 
           </div>
