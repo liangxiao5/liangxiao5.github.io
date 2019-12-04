@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Glide知识记录]]></title>
+    <url>%2F2019%2F12%2F04%2FGlide%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[Android 开发免不了加载图片，图片加载库也比较多，鉴于 Glide 是 Google 的亲儿子，做Android 开发，掌握 Glide 绝对不会吃亏，使用非常简单。 Glide 基本用法配置 Gradle配置 Gradle 依赖项，按照介绍配置依赖项，可能会有变化。 1234dependencies &#123; implementation &apos;com.github.bumptech.glide:glide:4.10.0&apos; annotationProcessor &apos;com.github.bumptech.glide:compiler:4.10.0&apos;&#125; 配置 Permission根据项目情况，可能会需要以下这些权限，最主要的还是网络权限。123456789101112&lt;!--添加网络权限--&gt;&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;&lt;!--允许访问网络状态--&gt;&lt;uses-permissionandroid:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;&lt;!--读取外部存储权限--&gt;&lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&gt;&lt;!--写入外部存储权限--&gt;&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt; Glide 使用一行代码搞定图片下载与展示。如下所示：千万不要小瞧这一行代码。可以做到加载网络上的图片、加载手机本地的图片、加载应用资源中的图片等等。123456789Glide.with(this).load(URL).into(imageView);// 加载本地图片File file = new File(getExternalCacheDir() + &quot;/image.jpg&quot;);Glide.with(this).load(file).into(imageView);// 加载应用资源int resource = R.drawable.image;Glide.with(this).load(resource).into(imageView); Glide 还有很多扩展内容，常用的扩展内容大概是占位符，指定格式图片，例如 Gif，Error 图片等，还有指定图片大小等扩展功能。 12345678910111213Glide.with(this) .load(url) .asGif() //.asBitmap() 设置静态图片 //.asFile() 文件格式，用于下载 //.asDrawable() // Drawable格式，显示图片 .placeholder(R.drawable.loading) 占位图 .error(R.drawable.error) 异常占位图 .diskCacheStrategy(DiskCacheStrategy.NONE) 缓存方式 .override(100, 100) 指定图片大小 .apply(RequestOptions.circleCropTransform()) 加载圆形图片 .transition(DrawableTransitionOptions.withCrossFade()) 淡入淡出效果 .into(imageView); 缓存类型Picasso和Glide对比]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>图片加载</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Android中xml的tools属性]]></title>
     <url>%2F2019%2F12%2F04%2FAndroid%E4%B8%ADxml%E7%9A%84tools%E5%B1%9E%E6%80%A7%2F</url>
     <content type="text"><![CDATA[Android 开发过程中，布局文件是可以直接在 IDE 中看到效果的，有时候有些布局的效果是根据网络请求的结果来展示，我们在写布局的时候，为了查看布局的美观，就直接写固定值了。 比如这种情况：TextView 在 xml 中没有设置任何字符，而是在 activity 中设置了 text。因此为了在 IDE 中预览效果，你必须在 xml 中为 TextView 控件设置 android:text 属性。12345&lt;TextView android:id=&quot;@+id/tv_name&quot; android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;Hello World&quot; /&gt; 有些布局界面可能是需要固定值，但是根据网络请求来显示的话，如果我们这样写忘记删除的话，就会导致一些问题，明明不应该显示的地方，确显示了，还得花时间去定位问题，即使没有显示问题，最终的产品中一直都有这种代码。 tools 属性上面的情况，我们是有方法避免的，可以使用tools的命名空间和属性来解决这个问题。 12345678910xmlns:tools=&quot;http://schemas.android.com/tools&quot;...&lt;TextView android:id=&quot;@+id/tv_name&quot; android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;wrap_content&quot; tools:text=&quot;Hello World&quot; /&gt; ... tools 属性可以告诉Android Studio ，这些属性在运行时是被忽略的，只在设计布局的时候有效。比如上面的例子，Hello World 只在设计布局的时候展示，运行后的界面是不会显示Hello World 的。 tools 可以覆盖 xml 布局中 android 的所有标准属性，将 android: 换成 tools: 即可。同时在运行的时候就连tools:本身都是被忽略的，不会被带进apk中。 tools 属性种类tools 属性分为两种，一种是关于 xml 布局设计的，一种是影响 Lint 提示的，上面介绍的是 tools 最基本的用法，在 UI 设计的时候覆盖标准的 android 属性。下面介绍 Lint 相关属性。 Lint 相关属性123tools:ignore ignore属性是告诉Lint忽略xml中的某些警告。tools:targetApi tools:locale Lint会提示 ImageView 缺少 android:contentDescription 属性。我们可以使用 tools:ignore 来忽略这个警告 假设minSdkLevel 15，而你使用了api21中的控件比如RippleDrawable,则Lint会提示警告。为了不显示这个警告，可以使用 tools:targetApi=”LOLLIPOP”。 默认情况下 res/values/strings.xml 中的字符串会执行拼写检查，如果不是英语，会提示拼写错误，通过 tools:locale=”it” 来告诉studio本地语言不是英语，就不会有提示了。 PS: 关于忽略Lint 的属性，了解就好，一般不常用，也不影响编译。 参考文档]]></content>
@@ -8,7 +19,7 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
+        <tag>xml</tag>
       </tags>
   </entry>
   <entry>
