@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Liang Xiao&#39;s Notes">
 <meta property="og:description" content="最近研究 Android 原生分享，深入了解了一下隐式 Intent，平常 App 内跳转，常用的是显示 Intent，隐式 Intent 常见的就是 App 启动页设置，下面的代码相信大家都很熟悉，只是没想到习以为常的背后隐藏着小小的知识点。 1234567&amp;lt;activity android:name=&amp;quot;.MainActivity&amp;quot;&amp;gt;            &amp;lt">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-10T06:24:36.842Z">
+<meta property="og:updated_time" content="2019-12-10T06:30:35.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android隐式Intent记录">
 <meta name="twitter:description" content="最近研究 Android 原生分享，深入了解了一下隐式 Intent，平常 App 内跳转，常用的是显示 Intent，隐式 Intent 常见的就是 App 启动页设置，下面的代码相信大家都很熟悉，只是没想到习以为常的背后隐藏着小小的知识点。 1234567&amp;lt;activity android:name=&amp;quot;.MainActivity&amp;quot;&amp;gt;            &amp;lt">
@@ -424,7 +424,7 @@
                 
               
 
-              <time title="创建时间：2019-12-10 10:40:13 / 修改时间：14:24:36" itemprop="dateCreated datePublished" datetime="2019-12-10T10:40:13+08:00">2019-12-10</time>
+              <time title="创建时间：2019-12-10 10:40:13 / 修改时间：14:30:35" itemprop="dateCreated datePublished" datetime="2019-12-10T10:40:13+08:00">2019-12-10</time>
             
 
             
@@ -517,7 +517,7 @@
 
       
         <p>最近研究 Android 原生分享，深入了解了一下隐式 Intent，平常 App 内跳转，常用的是显示 Intent，隐式 Intent 常见的就是 App 启动页设置，下面的代码相信大家都很熟悉，只是没想到习以为常的背后隐藏着小小的知识点。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity android:name=&quot;.MainActivity&quot;&gt;</span><br><span class="line">            &lt;intent-filter&gt;</span><br><span class="line">                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</span><br><span class="line"></span><br><span class="line">                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</span><br><span class="line">            &lt;/intent-filter&gt;</span><br><span class="line">        &lt;/activity&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity android:name=&quot;.MainActivity&quot;&gt;</span><br><span class="line">            &lt;intent-filter&gt;</span><br><span class="line">                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</span><br><span class="line"></span><br><span class="line">                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</span><br><span class="line">            &lt;/intent-filter&gt;</span><br><span class="line"> &lt;/activity&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="隐式-Intent"><a href="#隐式-Intent" class="headerlink" title="隐式 Intent"></a>隐式 Intent</h2><p>官方介绍：</p>
 <blockquote>
 <p>创建隐式 Intent 时，Android 系统通过将 Intent 的内容与在设备上其他应用的清单文件中声明的 Intent-Filter 进行比较，从而找到要启动的相应组件。 如果 Intent 与 Intent-Filter 匹配，则系统将启动该组件，并向其传递 Intent 对象。 如果多个 Intent 过滤器兼容，则系统会显示一个对话框，支持用户选取要使用的应用。</p>
@@ -531,7 +531,7 @@
 <li>Intent 代码：(当前应用)</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 启动其他应用的Activity</span><br><span class="line">Intent intent = new Intent();</span><br><span class="line">//action</span><br><span class="line">intent.setAction(&quot;com.example.IntentDemo.action.a&quot;);</span><br><span class="line">//Category可以不设置，因为一般在AndroidManifest.xml会设置Default，startActivity方法中也会默认添加Default。</span><br><span class="line">if (intent.resolveActivity(getPackageManager()) != null) &#123;</span><br><span class="line">    LogUtils.e(&quot;match success&quot;);</span><br><span class="line">    startActivity(intent);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    LogUtils.e(&quot;match failure&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="IntentFilter-匹配规则"><a href="#IntentFilter-匹配规则" class="headerlink" title="IntentFilter 匹配规则"></a>IntentFilter 匹配规则</h2><p>隐式 Intent 调用分为两部分，一部分是 AndroidManifest 中组件的配置，一部分是Intent 对象的构建。<br>当构建的 Intent 对象符合目标组件的配置的时候，才能成功启动目标组件。<br>过滤信息有三种，分别是：</p>
+<h2 id="IntentFilter-匹配规则"><a href="#IntentFilter-匹配规则" class="headerlink" title="IntentFilter 匹配规则"></a>IntentFilter 匹配规则</h2><p>隐式 Intent 调用分为两部分，一部分是 AndroidManifest 中组件的配置，一部分是Intent 对象的构建。<br>当构建的 Intent 对象符合目标组件的配置的时候，才能成功启动目标组件。<br><strong>过滤信息有三种</strong>，分别是：</p>
 <ul>
 <li>action</li>
 <li>category</li>
