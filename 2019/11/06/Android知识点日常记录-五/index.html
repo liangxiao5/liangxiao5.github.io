@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Liang Xiao&#39;s Notes">
 <meta property="og:description" content="日常复用代码踩坑记录。 RecyclerView: No layout manager attached; skipping layout因为需求变更，需要优化代码，然后自己偷懒，复用了几个界面，一个不留神，就给自己埋了一个坑，还搞的自己心情都不好了（🤦‍♂️）具体的错误如标题。一个很低级的错误 RecycleView忘记设置LayoutManager，自己的写代码习惯是在布局里面设置，同事是在">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-03T07:53:51.826Z">
+<meta property="og:updated_time" content="2019-12-10T02:13:59.408Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android知识点日常记录(五)">
 <meta name="twitter:description" content="日常复用代码踩坑记录。 RecyclerView: No layout manager attached; skipping layout因为需求变更，需要优化代码，然后自己偷懒，复用了几个界面，一个不留神，就给自己埋了一个坑，还搞的自己心情都不好了（🤦‍♂️）具体的错误如标题。一个很低级的错误 RecycleView忘记设置LayoutManager，自己的写代码习惯是在布局里面设置，同事是在">
@@ -441,7 +441,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-12-03 15:53:51" itemprop="dateModified" datetime="2019-12-03T15:53:51+08:00">2019-12-03</time>
+                <time title="修改时间：2019-12-10 10:13:59" itemprop="dateModified" datetime="2019-12-10T10:13:59+08:00">2019-12-10</time>
               
             
           </span>
@@ -535,10 +535,9 @@
 <h4 id="PS-记录下排查问题思路"><a href="#PS-记录下排查问题思路" class="headerlink" title="PS:记录下排查问题思路"></a>PS:记录下排查问题思路</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">抓布局，查看RecycleView的高度是否正确</span><br><span class="line">RecycleView是否正确绑定Adapter</span><br><span class="line">Adapter设置是否正确（onBindViewHolder）</span><br><span class="line">RecycleView是否正确设置了LayoutManager</span><br></pre></td></tr></table></figure>
 <h2 id="Intent隐式跳转"><a href="#Intent隐式跳转" class="headerlink" title="Intent隐式跳转"></a>Intent隐式跳转</h2><p>原生分享主要用的知识点就是Intent隐式跳转。显示跳转，一般我们都很熟悉，项目中最长用到的。下面的示例很熟悉：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Intent intent=new Intent(MainActivity.this, SecondActivity.class); </span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure>
-<p>隐式跳转在项目中一般使用较少，也因项目而异。代码如下：<br>一目了然，隐式跳转五步走。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Intent shareIntent = new Intent();</span><br><span class="line">shareIntent.setAction(Intent.ACTION_SEND);</span><br><span class="line">shareIntent.putExtra(Intent.EXTRA_TEXT, &quot; Hello World&quot;);</span><br><span class="line">shareIntent.setType(&quot;text/plain&quot;);</span><br><span class="line">startActivity(Intent.createChooser(shareIntent, &quot;share into&quot;));</span><br></pre></td></tr></table></figure></p>
+<p>隐式跳转在项目中一般使用较少，也因项目而异。跳转外部应用，常用的是隐式跳转。代码如下：<br>一目了然，隐式跳转五步走。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Intent shareIntent = new Intent();</span><br><span class="line">shareIntent.setAction(Intent.ACTION_SEND);</span><br><span class="line">shareIntent.putExtra(Intent.EXTRA_TEXT, &quot; Hello World&quot;);</span><br><span class="line">shareIntent.setType(&quot;text/plain&quot;);</span><br><span class="line">startActivity(Intent.createChooser(shareIntent, &quot;share into&quot;));</span><br></pre></td></tr></table></figure></p>
 <h2 id="com-android-builder-internal-aapt-v2-Aapt2Exception-Android-resource-linking-failed"><a href="#com-android-builder-internal-aapt-v2-Aapt2Exception-Android-resource-linking-failed" class="headerlink" title="com.android.builder.internal.aapt.v2.Aapt2Exception: Android resource linking failed"></a>com.android.builder.internal.aapt.v2.Aapt2Exception: Android resource linking failed</h2><p>项目换到AndroidX，自己更新代码后，项目无法运行，Google了好多方法，但是都无法解决，是<code>Gradle版本不一致</code>，自己帮助同事用Git解决冲突的时候，略显粗暴，直接让本地的一些代码被还原，导致Gradle文件被还原，项目运行不了。解决冲突还是需要耐心仔细。</p>
 <h2 id="Parcelable-encountered-IOException-writing-serializable-object"><a href="#Parcelable-encountered-IOException-writing-serializable-object" class="headerlink" title="Parcelable encountered IOException writing serializable object"></a>Parcelable encountered IOException writing serializable object</h2><p>界面传值的时候，报如题错误，JavaBean有嵌套，内部嵌套的Bean未序列化导致。<br>如果需要序列化JavaBean，将所有的Bean都序列化，避免此问题。</p>
-<p>## </p>
 
       
     </div>
@@ -682,7 +681,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -742,7 +741,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -841,7 +842,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">24k</span>
+    <span title="站点总字数">26k</span>
   
 
   
@@ -852,7 +853,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">22 分钟</span>
+    <span title="站点阅读时长">24 分钟</span>
   
 </div>
 
