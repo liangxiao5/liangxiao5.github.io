@@ -96,18 +96,20 @@
 
 
 
-  <meta name="description" content="记录人生">
-<meta name="keywords" content="Android">
-<meta property="og:type" content="website">
-<meta property="og:title" content="文章分类">
-<meta property="og:url" content="https://liangxiao5.github.io/categories/index.html">
+  <meta name="description" content="从 Android 6 （API &amp;lt; 23）开始，Android 系统提供动态权限申请机制，对于一些敏感的权限，决定权交还给了用户，不再是强制申请了。App 在使用危险权限的时，需用户授权才可以进一步操作。旧的权限申请方式是静态的，只要 App 在 AndroidManifest.xml 中注册了权限，安装APP后默认就获取了这些权限。这种授权方式安全性较低，容易被垃圾 App 窃取用户信息">
+<meta name="keywords" content="动态权限">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android 动态权限">
+<meta property="og:url" content="https://liangxiao5.github.io/2020/03/02/Android-动态权限/index.html">
 <meta property="og:site_name" content="Liang Xiao&#39;s Notes">
-<meta property="og:description" content="记录人生">
+<meta property="og:description" content="从 Android 6 （API &amp;lt; 23）开始，Android 系统提供动态权限申请机制，对于一些敏感的权限，决定权交还给了用户，不再是强制申请了。App 在使用危险权限的时，需用户授权才可以进一步操作。旧的权限申请方式是静态的，只要 App 在 AndroidManifest.xml 中注册了权限，安装APP后默认就获取了这些权限。这种授权方式安全性较低，容易被垃圾 App 窃取用户信息">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-28T14:36:56.135Z">
+<meta property="og:image" content="https://liangxiao5.github.io/2020/03/02/Android-动态权限/permission.jpg">
+<meta property="og:updated_time" content="2020-03-02T09:34:08.457Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文章分类">
-<meta name="twitter:description" content="记录人生">
+<meta name="twitter:title" content="Android 动态权限">
+<meta name="twitter:description" content="从 Android 6 （API &amp;lt; 23）开始，Android 系统提供动态权限申请机制，对于一些敏感的权限，决定权交还给了用户，不再是强制申请了。App 在使用危险权限的时，需用户授权才可以进一步操作。旧的权限申请方式是静态的，只要 App 在 AndroidManifest.xml 中注册了权限，安装APP后默认就获取了这些权限。这种授权方式安全性较低，容易被垃圾 App 窃取用户信息">
+<meta name="twitter:image" content="https://liangxiao5.github.io/2020/03/02/Android-动态权限/permission.jpg">
 
 
 
@@ -115,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="https://liangxiao5.github.io/categories/">
+  <link rel="canonical" href="https://liangxiao5.github.io/2020/03/02/Android-动态权限/">
 
 
 
@@ -125,7 +127,7 @@
   };
 </script>
 
-  <title>文章分类 | Liang Xiao's Notes</title>
+  <title>Android 动态权限 | Liang Xiao's Notes</title>
   
 
 
@@ -249,7 +251,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -361,118 +363,268 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liangxiao5.github.io/2020/03/02/Android-动态权限/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liang Xiao">
+      <meta itemprop="description" content="记录人生">
+      <meta itemprop="image" content="/images/touxiang.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Liang Xiao's Notes">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">文章分类
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
+          <h1 class="post-title" itemprop="name headline">Android 动态权限
+
               
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
-                
-                  
-                
+                <span class="post-meta-item-text">发表于</span>
               
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
+
               
                 
-                  
+              
+
+              <time title="创建时间：2020-03-02 09:15:50 / 修改时间：17:34:08" itemprop="dateCreated datePublished" datetime="2020-03-02T09:15:50+08:00">2020-03-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
                 
               
-                
-                  
-                
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
               
-                
-                  
-                
+
               
-              目前共计 9 个分类
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.1k字</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
             </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EventBus/">EventBus</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/">Flutter</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GitLab/">GitLab</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Glide/">Glide</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/WebView/">WebView</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/日常/">日常</a><span class="category-list-count">2</span></li></ul>
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>从 Android 6 （API &lt; 23）开始，Android 系统提供动态权限申请机制，对于一些敏感的权限，决定权交还给了用户，不再是强制申请了。App 在使用危险权限的时，需用户授权才可以进一步操作。旧的权限申请方式是静态的，只要 App 在 AndroidManifest.xml 中注册了权限，安装APP后默认就获取了这些权限。这种授权方式安全性较低，容易被垃圾 App 窃取用户信息。</p>
+<p>随着系统的升级，Google 也意识到静态权限申请的弊端，所以在 Android6.0 中，对权限进行了重新梳理，将权限分为普通权限和危险权限：</p>
+<h4 id="普通权限"><a href="#普通权限" class="headerlink" title="普通权限"></a>普通权限</h4><ul>
+<li>不影响用户隐私的权限，AndroidManifest.xml 中注册即可获取</li>
+</ul>
+<h4 id="危险权限"><a href="#危险权限" class="headerlink" title="危险权限"></a>危险权限</h4><ul>
+<li>可以访问用户隐私数据的权限，必须获取用户的同意才可获得授权。如下图：</li>
+</ul>
+<p><img src="permission.jpg" alt="flutter"></p>
+<p>在 Android 中应该尽量使用隔离式动态权限申请，什么是隔离式呢，就是动态申请权限的时候，用户没有授权时，屏蔽相关功能即可，而不是打开App不授权的话，直接退出App，不让用户使用，这种权限使用方式用户体验太差。常见于华为手机的各种自带App，不给权限，直接退出。</p>
+<h4 id="动态权限申请过程"><a href="#动态权限申请过程" class="headerlink" title="动态权限申请过程"></a>动态权限申请过程</h4><h5 id="检查权限"><a href="#检查权限" class="headerlink" title="检查权限"></a>检查权限</h5><p>Activity 继承 AppCompatActivity，首先检查是否已经赋予权限，如果没有授权，可以使用 <code>checkSelfPermission(@NonNull Context context, @NonNull String permission)</code>方法，通过返回值来判断。具体代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE)</span><br><span class="line">               == PackageManager.PERMISSION_GRANTED) &#123;</span><br><span class="line">           //已经授权，走正常逻辑操作，比如打电话，打开相册</span><br><span class="line">       &#125; else &#123;</span><br><span class="line">       //没授权，去申请权限</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<h5 id="申请权限"><a href="#申请权限" class="headerlink" title="申请权限"></a>申请权限</h5><p>上个步骤中，没有授权的话，需要去申请动态权限，可以通过<code>requestPermissions(final @NonNull Activity activity,final @NonNull String[] permissions, final @IntRange(from = 0) int requestCode)</code>来进行申请。需要定义一个静态变量作为<code>requestCode</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">private static final int REQUEST_CALL_PHONE = 100;</span><br><span class="line"></span><br><span class="line">//这行代码即为上面检查权限else里面的逻辑</span><br><span class="line">ActivityCompat.requestPermissions(this, new String[]&#123;Manifest.permission.CALL_PHONE&#125;, REQUEST_CALL_PHONE);</span><br></pre></td></tr></table></figure>
+<p>于是在手机界面上会弹出权限提示框，为系统样式，不可修改。<code>拒绝</code>或者<code>同意</code>都会走到接下来的流程。</p>
+<h5 id="处理结果"><a href="#处理结果" class="headerlink" title="处理结果"></a>处理结果</h5><p>在<code>onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)</code>方法中处理接收到<code>拒绝</code>还是<code>允许</code>的结果消息。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">   public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) &#123;</span><br><span class="line"></span><br><span class="line">       switch (requestCode) &#123;</span><br><span class="line">           case REQUEST_CALL_PHONE:</span><br><span class="line">               if (grantResults[0] == PackageManager.PERMISSION_GRANTED) &#123;</span><br><span class="line">                  //走正常逻辑操作，比如打电话，打开相册</span><br><span class="line">               &#125; else &#123;</span><br><span class="line">               //弹框提示</span><br><span class="line">               &#125;</span><br><span class="line">               break;</span><br><span class="line">           default:</span><br><span class="line">               super.onRequestPermissionsResult(requestCode, permissions, grantResults);</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>如果用户选择<code>同意</code>，就可以调用拨打电话的按钮，同时这个对话框之后都不会出现了。</p>
+<p>如果用户拒绝了，那就无法调用拨打电话的代码了。为了用户体验，可以弹出一个对话框，告知用户我需要这个权限，没有这个权限程序无法正常运行。</p>
+<p>如果用户勾选了<code>不再询问</code>或者 <code>禁止后不再询问</code>，意味着用户永远地拒绝了相关的权限，同时这个对话框不会再弹出来了。为了挽救一下，我们可以弹框提示用户去设置里面手动开启权限。可以使用Android 提供的<code>shouldShowRequestPermissionRationale(@NonNull Activity activity,@NonNull String permission)</code>方法来判断用户是否选择了<code>不再提示</code>相关选项。</p>
+<p>处理结果消息的代码，可以修改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">   public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) &#123;</span><br><span class="line">       switch (requestCode) &#123;</span><br><span class="line">           case REQUEST_CALL_PHONE:</span><br><span class="line">               if (grantResults[0] == PackageManager.PERMISSION_GRANTED) &#123;</span><br><span class="line">                   callPhone();</span><br><span class="line">               &#125; else &#123;</span><br><span class="line">                   if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CALL_PHONE)) &#123;</span><br><span class="line">                       showTipDialog();</span><br><span class="line">                   &#125; else &#123;</span><br><span class="line">                       goToSetting();</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125;</span><br><span class="line">               break;</span><br><span class="line">           default:</span><br><span class="line">               super.onRequestPermissionsResult(requestCode, permissions, grantResults);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>以上就是动态权限申请的全部过程了。完整代码，见下面链接。</p>
+<p><a href="https://github.com/liangxiao5/permissionTest" target="_blank" rel="noopener">完整代码</a></p>
+
       
     </div>
+
     
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
 
 
 
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Liang Xiao</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
     
+    <a href="https://liangxiao5.github.io/2020/03/02/Android-动态权限/" title="Android 动态权限">https://liangxiao5.github.io/2020/03/02/Android-动态权限/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
     
-    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/动态权限/" rel="tag"># 动态权限</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/12/MAC上VSCode配置Flutter开发环境/" rel="next" title="MAC上VSCode配置Flutter开发环境">
+                <i class="fa fa-chevron-left"></i> MAC上VSCode配置Flutter开发环境
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -501,8 +653,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -640,6 +801,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#普通权限"><span class="nav-number">1.</span> <span class="nav-text">普通权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#危险权限"><span class="nav-number">2.</span> <span class="nav-text">危险权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态权限申请过程"><span class="nav-number">3.</span> <span class="nav-text">动态权限申请过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#检查权限"><span class="nav-number">3.1.</span> <span class="nav-text">检查权限</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#申请权限"><span class="nav-number">3.2.</span> <span class="nav-text">申请权限</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#处理结果"><span class="nav-number">3.3.</span> <span class="nav-text">处理结果</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
