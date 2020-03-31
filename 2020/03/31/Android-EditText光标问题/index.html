@@ -96,17 +96,18 @@
 
 
 
-  <meta name="description" content="记录人生">
-<meta name="keywords" content="Android">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Liang Xiao&#39;s Notes">
-<meta property="og:url" content="https://liangxiao5.github.io/categories/Android/index.html">
+  <meta name="description" content="以前一直没有注意过 EditText 光标的问题，今天有人提了优化用户体验建议。自己就着手优化了下，不是什么大问题，但是还是有一些小坑，以此记录，避免下次在踩坑。 全局修改光标颜色全局光标颜色修改很容易，找到 AndroidManifest文件，查看 &amp;quot;android:theme=&amp;quot;@style/AppTheme&amp;quot;，查看 AppTheme的属性，其中 &amp;lt;item">
+<meta name="keywords" content="EditText">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android EditText光标问题">
+<meta property="og:url" content="https://liangxiao5.github.io/2020/03/31/Android-EditText光标问题/index.html">
 <meta property="og:site_name" content="Liang Xiao&#39;s Notes">
-<meta property="og:description" content="记录人生">
+<meta property="og:description" content="以前一直没有注意过 EditText 光标的问题，今天有人提了优化用户体验建议。自己就着手优化了下，不是什么大问题，但是还是有一些小坑，以此记录，避免下次在踩坑。 全局修改光标颜色全局光标颜色修改很容易，找到 AndroidManifest文件，查看 &amp;quot;android:theme=&amp;quot;@style/AppTheme&amp;quot;，查看 AppTheme的属性，其中 &amp;lt;item">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-03-31T03:16:09.322Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Liang Xiao&#39;s Notes">
-<meta name="twitter:description" content="记录人生">
+<meta name="twitter:title" content="Android EditText光标问题">
+<meta name="twitter:description" content="以前一直没有注意过 EditText 光标的问题，今天有人提了优化用户体验建议。自己就着手优化了下，不是什么大问题，但是还是有一些小坑，以此记录，避免下次在踩坑。 全局修改光标颜色全局光标颜色修改很容易，找到 AndroidManifest文件，查看 &amp;quot;android:theme=&amp;quot;@style/AppTheme&amp;quot;，查看 AppTheme的属性，其中 &amp;lt;item">
 
 
 
@@ -114,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://liangxiao5.github.io/categories/Android/">
+  <link rel="canonical" href="https://liangxiao5.github.io/2020/03/31/Android-EditText光标问题/">
 
 
 
@@ -124,7 +125,7 @@
   };
 </script>
 
-  <title>分类: Android | Liang Xiao's Notes</title>
+  <title>Android EditText光标问题 | Liang Xiao's Notes</title>
   
 
 
@@ -172,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,7 +249,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -360,291 +361,271 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Android<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liangxiao5.github.io/2020/03/31/Android-EditText光标问题/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liang Xiao">
+      <meta itemprop="description" content="记录人生">
+      <meta itemprop="image" content="/images/touxiang.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Liang Xiao's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2020/03/31/Android-EditText光标问题/" itemprop="url">
-            
-              <span itemprop="name">Android EditText光标问题</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Android EditText光标问题
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-03-31T10:04:51+08:00" content="2020-03-31">
-          03-31
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-31 10:04:51 / 修改时间：11:16:09" itemprop="dateCreated datePublished" datetime="2020-03-31T10:04:51+08:00">2020-03-31</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.4k字</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2020/03/02/Android-动态权限/" itemprop="url">
-            
-              <span itemprop="name">Android 动态权限</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-03-02T09:15:50+08:00" content="2020-03-02">
-          03-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/12/10/Android隐式Intent记录/" itemprop="url">
-            
-              <span itemprop="name">Android隐式Intent记录</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-12-10T10:40:13+08:00" content="2019-12-10">
-          12-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/12/04/Android中xml的tools属性/" itemprop="url">
-            
-              <span itemprop="name">Android中xml的tools属性</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-12-04T09:29:47+08:00" content="2019-12-04">
-          12-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/11/06/Android知识点日常记录-五/" itemprop="url">
-            
-              <span itemprop="name">Android知识点日常记录(五)</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-06T10:35:45+08:00" content="2019-11-06">
-          11-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/10/Android知识点日常记录-四/" itemprop="url">
-            
-              <span itemprop="name">Android知识点日常记录(四)</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-10T17:28:26+08:00" content="2019-09-10">
-          09-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/02/Android知识点日常记录-三/" itemprop="url">
-            
-              <span itemprop="name">Android知识点日常记录(三)</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-02T09:04:48+08:00" content="2019-09-02">
-          09-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/16/Android知识点日常记录-二/" itemprop="url">
-            
-              <span itemprop="name">Android知识点日常记录(二)</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-16T20:23:23+08:00" content="2019-06-16">
-          06-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/07/Android知识点日常记录(一)/" itemprop="url">
-            
-              <span itemprop="name">Android 知识点 日常记录（一）</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-07T13:43:13+08:00" content="2019-06-07">
-          06-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <p>以前一直没有注意过 EditText 光标的问题，今天有人提了优化用户体验建议。自己就着手优化了下，不是什么大问题，但是还是有一些小坑，以此记录，避免下次在踩坑。</p>
+<h4 id="全局修改光标颜色"><a href="#全局修改光标颜色" class="headerlink" title="全局修改光标颜色"></a>全局修改光标颜色</h4><p>全局光标颜色修改很容易，找到 <code>AndroidManifest</code>文件，查看 <code>&quot;android:theme=&quot;@style/AppTheme&quot;</code>，查看 <code>AppTheme</code>的属性，其中 <code>&lt;item name=&quot;colorAccent&quot;&gt;@color/colorAccent&lt;/item&gt;</code>就是设置全局的获取焦点后的光标颜色，可以修改这里变成我们需求的色值。XML设置的代码，跟往常一样即可。</p>
+<p>PS：这个是全局修改，修改了这个属性的颜色值，项目中用到此颜色值的相关组件颜色都会产生变化，比如状态栏。建议慎重。</p>
+<h4 id="修改单个EditText光标颜色"><a href="#修改单个EditText光标颜色" class="headerlink" title="修改单个EditText光标颜色"></a>修改单个EditText光标颜色</h4><p>在 Android3.2 或者更高版本上面，EditText 有一个属性：<code>android:textCursorDrawable</code>，可以按照如下的方式进行设置。</p>
+<h5 id="创建光标颜色的-drawable-资源文件"><a href="#创建光标颜色的-drawable-资源文件" class="headerlink" title="创建光标颜色的 drawable 资源文件"></a>创建光标颜色的 drawable 资源文件</h5><p>需要创建光标颜色的 drawable 资源文件。举例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    android:shape=&quot;rectangle&quot;&gt;</span><br><span class="line">    &lt;size android:width=&quot;1dp&quot; /&gt;</span><br><span class="line">    &lt;solid android:color=&quot;#33a0ff&quot; /&gt;</span><br><span class="line">&lt;/shape&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="使用android-textCursorDrawable-quot-quot-属性。"><a href="#使用android-textCursorDrawable-quot-quot-属性。" class="headerlink" title="使用android:textCursorDrawable=&quot;&quot;属性。"></a>使用<code>android:textCursorDrawable=&quot;&quot;</code>属性。</h5><p>XML 布局中，使用<code>android:textCursorDrawable=&quot;@drawable/color_cursor&quot;</code>，这个属性是用来控制光标颜色的。完整代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;EditText</span><br><span class="line">         android:id=&quot;@+id/minutes&quot;</span><br><span class="line">         android:layout_width=&quot;match_parent&quot;</span><br><span class="line">         android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">         android:layout_marginEnd=&quot;@dimen/dp_15&quot;</span><br><span class="line">         android:background=&quot;@null&quot;</span><br><span class="line">         android:cursorVisible=&quot;true&quot;</span><br><span class="line">         android:textCursorDrawable=&quot;@drawable/color_cursor&quot;</span><br><span class="line">         android:focusableInTouchMode=&quot;true&quot;</span><br><span class="line">         /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="设置光标颜色与文本颜色一致"><a href="#设置光标颜色与文本颜色一致" class="headerlink" title="设置光标颜色与文本颜色一致"></a>设置光标颜色与文本颜色一致</h4><p>很简单，将<code>android:textCursorDrawable</code>的值设置为<code>&quot;@null&quot;</code> ，<code>&quot;@null&quot;</code> 作用是让光标颜色和文本颜色保持一致。</p>
+<h4 id="光标显示与隐藏"><a href="#光标显示与隐藏" class="headerlink" title="光标显示与隐藏"></a>光标显示与隐藏</h4><p>设置<code>android:cursorVisible</code>即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">android:cursorVisible=&quot;true&quot; 显示光标</span><br><span class="line"></span><br><span class="line">android:cursorVisible=&quot;false&quot; 隐藏光标</span><br></pre></td></tr></table></figure>
+<h4 id="设置光标位置"><a href="#设置光标位置" class="headerlink" title="设置光标位置"></a>设置光标位置</h4><p>EditText 如果有默认输入，光标获取焦点后，默认插入光标是在第一个位置的。用户体验不是很好，为了方便用户使用，需要把光标移动到最后位置，可以使用 <code>setSelection</code> 方法完成。如下例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">EditText et = ... </span><br><span class="line">String text = &quot;text&quot;; </span><br><span class="line">et.setText(text); </span><br><span class="line">et.setSelection(text.length());</span><br></pre></td></tr></table></figure>
+<h4 id="取消EditText下划线"><a href="#取消EditText下划线" class="headerlink" title="取消EditText下划线"></a>取消EditText下划线</h4><p>可以通过背景属性设置，取消下划线。<code>android:background=&quot;@null&quot;</code>，这样操作会使的下划线消失的同时，默认边距也不存在。需要重新处理边距问题。</p>
+<h4 id="自定义style样式修改下划线光标颜色"><a href="#自定义style样式修改下划线光标颜色" class="headerlink" title="自定义style样式修改下划线光标颜色"></a>自定义style样式修改下划线光标颜色</h4><p>使用<code>android:theme=&quot;@style/MyEditText&quot;</code>属性设置自定义主题。如下，需要先创建自己的style样式，然后使用属性设置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--colorControlNormal 为没有获取焦点时候下划线的颜色--&gt;</span><br><span class="line">&lt;!--colorControlActivated 为获取焦点时候光标与下划线的颜色--&gt;</span><br><span class="line">&lt;style name=&quot;MyEditText&quot; parent=&quot;Theme.AppCompat.Light&quot;&gt;</span><br><span class="line">    &lt;item name=&quot;colorControlNormal&quot;&gt;@color/colorPrimary&lt;/item&gt;</span><br><span class="line">    &lt;item name=&quot;colorControlActivated&quot;&gt;@android:color/holo_orange_dark&lt;/item&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p><a href="https://segmentfault.com/a/1190000009507919" target="_blank" rel="noopener">参考博客</a></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Liang Xiao</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="https://liangxiao5.github.io/2020/03/31/Android-EditText光标问题/" title="Android EditText光标问题">https://liangxiao5.github.io/2020/03/31/Android-EditText光标问题/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/EditText/" rel="tag"># EditText</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/02/Android-动态权限/" rel="next" title="Android 动态权限">
+                <i class="fa fa-chevron-left"></i> Android 动态权限
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -664,8 +645,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -805,6 +795,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#全局修改光标颜色"><span class="nav-number">1.</span> <span class="nav-text">全局修改光标颜色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改单个EditText光标颜色"><span class="nav-number">2.</span> <span class="nav-text">修改单个EditText光标颜色</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建光标颜色的-drawable-资源文件"><span class="nav-number">2.1.</span> <span class="nav-text">创建光标颜色的 drawable 资源文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用android-textCursorDrawable-quot-quot-属性。"><span class="nav-number">2.2.</span> <span class="nav-text">使用android:textCursorDrawable=&quot;&quot;属性。</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置光标颜色与文本颜色一致"><span class="nav-number">3.</span> <span class="nav-text">设置光标颜色与文本颜色一致</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#光标显示与隐藏"><span class="nav-number">4.</span> <span class="nav-text">光标显示与隐藏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置光标位置"><span class="nav-number">5.</span> <span class="nav-text">设置光标位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取消EditText下划线"><span class="nav-number">6.</span> <span class="nav-text">取消EditText下划线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义style样式修改下划线光标颜色"><span class="nav-number">7.</span> <span class="nav-text">自定义style样式修改下划线光标颜色</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -979,6 +986,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -994,6 +1005,8 @@
 
   
 
+
+  
 
 
   
